@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Acta-Book.otf">
+            <string>Acta-Book</string>
+        </array>
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TMPaymentListTableViewCell" rowHeight="96" id="qTx-hd-ME9" customClass="TMPaymentListTableViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qTx-hd-ME9" id="gHd-Sm-bSc">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpP-Xp-yFb">
+                        <rect key="frame" x="20" y="8" width="280" height="80"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultCreditCard" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-nr-COF">
+                                <rect key="frame" x="0.0" y="17" width="27" height="20"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdN-Rv-9mi">
+                                <rect key="frame" x="44" y="42" width="228" height="21"/>
+                                <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="13"/>
+                                <color key="textColor" red="0.63529411759999999" green="0.63137254899999995" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-mJ-J72">
+                                <rect key="frame" x="44" y="17" width="236" height="21"/>
+                                <fontDescription key="fontDescription" name="Acta-Book" family="Acta" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckCircle" translatesAutoresizingMaskIntoConstraints="NO" id="vy0-iA-6Qa">
+                                <rect key="frame" x="253" y="14" width="27" height="27"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="9ae-wn-ZN9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vy0-iA-6Qa" firstAttribute="trailing" secondItem="Peo-mJ-J72" secondAttribute="trailing" id="2fc-CU-gz3"/>
+                            <constraint firstItem="TdN-Rv-9mi" firstAttribute="top" secondItem="Peo-mJ-J72" secondAttribute="bottom" constant="4" id="6L3-Wo-0LQ"/>
+                            <constraint firstItem="TdN-Rv-9mi" firstAttribute="trailing" secondItem="qpP-Xp-yFb" secondAttribute="trailingMargin" id="Hyl-QC-6ty"/>
+                            <constraint firstItem="TdN-Rv-9mi" firstAttribute="top" secondItem="vy0-iA-6Qa" secondAttribute="bottom" constant="1" id="NtZ-vg-jGW"/>
+                            <constraint firstAttribute="bottom" secondItem="TdN-Rv-9mi" secondAttribute="bottom" constant="17" id="SnC-gF-Gtw"/>
+                            <constraint firstItem="dwx-nr-COF" firstAttribute="centerY" secondItem="vy0-iA-6Qa" secondAttribute="centerY" id="W0f-fR-CVM"/>
+                            <constraint firstItem="TdN-Rv-9mi" firstAttribute="leading" secondItem="qpP-Xp-yFb" secondAttribute="leading" constant="44" id="YB7-Tl-0UC"/>
+                            <constraint firstItem="vy0-iA-6Qa" firstAttribute="top" secondItem="qpP-Xp-yFb" secondAttribute="top" constant="14" id="Yvj-g4-pp2"/>
+                            <constraint firstItem="Peo-mJ-J72" firstAttribute="leading" secondItem="TdN-Rv-9mi" secondAttribute="leading" id="bYJ-nD-bZ1"/>
+                            <constraint firstAttribute="trailing" secondItem="vy0-iA-6Qa" secondAttribute="trailing" id="d32-qj-5sN"/>
+                            <constraint firstItem="dwx-nr-COF" firstAttribute="leading" secondItem="qpP-Xp-yFb" secondAttribute="leading" id="dID-Xt-ObP"/>
+                            <constraint firstItem="dwx-nr-COF" firstAttribute="top" secondItem="Peo-mJ-J72" secondAttribute="top" id="hKn-Mu-ygC"/>
+                            <constraint firstAttribute="bottom" secondItem="dwx-nr-COF" secondAttribute="bottom" constant="43" id="inq-p0-YvQ"/>
+                            <constraint firstItem="Peo-mJ-J72" firstAttribute="centerY" secondItem="vy0-iA-6Qa" secondAttribute="centerY" id="lWA-Jj-i7d"/>
+                            <constraint firstItem="Peo-mJ-J72" firstAttribute="leading" secondItem="dwx-nr-COF" secondAttribute="trailing" constant="17" id="nFZ-iN-bbx"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQM-tj-nMm">
+                        <rect key="frame" x="20" y="95" width="280" height="1"/>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="qpP-Xp-yFb" firstAttribute="leading" secondItem="gHd-Sm-bSc" secondAttribute="leadingMargin" constant="12" id="3mJ-Nj-YZr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="BQM-tj-nMm" secondAttribute="bottom" constant="-9" id="Dc9-PG-Im2"/>
+                    <constraint firstItem="qpP-Xp-yFb" firstAttribute="trailing" secondItem="BQM-tj-nMm" secondAttribute="trailing" id="E6v-Pd-tx4"/>
+                    <constraint firstItem="qpP-Xp-yFb" firstAttribute="centerY" secondItem="gHd-Sm-bSc" secondAttribute="centerY" id="Qdg-Hl-JBL"/>
+                    <constraint firstItem="qpP-Xp-yFb" firstAttribute="centerX" secondItem="gHd-Sm-bSc" secondAttribute="centerX" id="Tn3-bo-FVK"/>
+                    <constraint firstItem="BQM-tj-nMm" firstAttribute="top" secondItem="qpP-Xp-yFb" secondAttribute="bottom" constant="7" id="YNt-yI-iOA"/>
+                    <constraint firstItem="qpP-Xp-yFb" firstAttribute="top" secondItem="gHd-Sm-bSc" secondAttribute="topMargin" id="b4g-ah-ewL"/>
+                    <constraint firstItem="qpP-Xp-yFb" firstAttribute="leading" secondItem="BQM-tj-nMm" secondAttribute="leading" id="gTR-Ez-IAt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="cardTypeImageView" destination="dwx-nr-COF" id="nze-rR-oKX"/>
+                <outlet property="checkmarkImageView" destination="vy0-iA-6Qa" id="LQT-88-hYs"/>
+                <outlet property="detailsLabel" destination="TdN-Rv-9mi" id="CLf-2v-9qq"/>
+                <outlet property="movingView" destination="qpP-Xp-yFb" id="u6M-re-VAI"/>
+                <outlet property="nameLabel" destination="Peo-mJ-J72" id="Mql-EI-JdM"/>
+            </connections>
+            <point key="canvasLocation" x="258" y="328"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CheckCircle" width="25" height="25"/>
+        <image name="DefaultCreditCard" width="24" height="16"/>
+    </resources>
+</document>

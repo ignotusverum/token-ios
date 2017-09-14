@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Book.otf">
+            <string>Acta-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TMOrderNoteCell" id="i9Y-cC-KvG" customClass="TMOrderNoteCollectionViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2a-YR-oBq">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.41176470588235292" green="0.40392156862745099" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sender name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35e-J3-iCs">
+                        <fontDescription key="fontDescription" name="Acta-Book" family="Acta" pointSize="18"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="i9Y-cC-KvG" id="GWV-zq-8MZ"/>
+                        </connections>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bF-Ng-GCJ">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.41176470588235292" green="0.40392156862745099" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCb-HN-sfI">
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="gzL-5a-Vgp"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Receiver name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpN-rs-Ae9">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="OIN-d2-SUp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Acta-Book" family="Acta" pointSize="18"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="i9Y-cC-KvG" id="GVM-gG-76F"/>
+                        </connections>
+                    </textField>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vCb-HN-sfI" firstAttribute="centerY" secondItem="i9Y-cC-KvG" secondAttribute="centerY" id="2Bj-YP-DfI"/>
+                <constraint firstItem="i2a-YR-oBq" firstAttribute="top" secondItem="i9Y-cC-KvG" secondAttribute="top" constant="20" id="2cj-xm-Yjk"/>
+                <constraint firstItem="8bF-Ng-GCJ" firstAttribute="leading" secondItem="35e-J3-iCs" secondAttribute="leading" id="780-pd-drY"/>
+                <constraint firstItem="lpN-rs-Ae9" firstAttribute="top" secondItem="i2a-YR-oBq" secondAttribute="bottom" id="Ayf-zB-NPj"/>
+                <constraint firstItem="lpN-rs-Ae9" firstAttribute="trailing" secondItem="8bF-Ng-GCJ" secondAttribute="trailing" id="FQz-ox-2Q0"/>
+                <constraint firstItem="i2a-YR-oBq" firstAttribute="trailing" secondItem="i9Y-cC-KvG" secondAttribute="trailingMargin" id="Iq1-yj-S08"/>
+                <constraint firstItem="i2a-YR-oBq" firstAttribute="trailing" secondItem="lpN-rs-Ae9" secondAttribute="trailing" id="P5f-Ez-TDt"/>
+                <constraint firstItem="8bF-Ng-GCJ" firstAttribute="top" secondItem="vCb-HN-sfI" secondAttribute="bottom" constant="22" id="Vmn-5x-1QU"/>
+                <constraint firstItem="35e-J3-iCs" firstAttribute="top" secondItem="8bF-Ng-GCJ" secondAttribute="bottom" id="Xct-pf-ked"/>
+                <constraint firstAttribute="bottom" secondItem="35e-J3-iCs" secondAttribute="bottom" constant="14" id="gJq-vd-Mqj"/>
+                <constraint firstItem="8bF-Ng-GCJ" firstAttribute="trailing" secondItem="35e-J3-iCs" secondAttribute="trailing" id="ir1-C4-flX"/>
+                <constraint firstItem="vCb-HN-sfI" firstAttribute="centerX" secondItem="8bF-Ng-GCJ" secondAttribute="centerX" id="nWi-rC-4v9"/>
+                <constraint firstItem="i2a-YR-oBq" firstAttribute="leading" secondItem="i9Y-cC-KvG" secondAttribute="leadingMargin" id="rl6-IY-5Qd"/>
+                <constraint firstItem="i2a-YR-oBq" firstAttribute="leading" secondItem="lpN-rs-Ae9" secondAttribute="leading" id="t4n-3R-3Qs"/>
+                <constraint firstItem="vCb-HN-sfI" firstAttribute="top" secondItem="lpN-rs-Ae9" secondAttribute="bottom" constant="15" id="tHu-Qw-m3R"/>
+                <constraint firstItem="vCb-HN-sfI" firstAttribute="leading" secondItem="i9Y-cC-KvG" secondAttribute="leading" constant="20" id="xo3-X7-wFc"/>
+                <constraint firstItem="lpN-rs-Ae9" firstAttribute="leading" secondItem="8bF-Ng-GCJ" secondAttribute="leading" id="zKI-8U-R5S"/>
+            </constraints>
+            <connections>
+                <outlet property="receiverTextField" destination="lpN-rs-Ae9" id="3pW-Nk-2ug"/>
+                <outlet property="senderTextField" destination="35e-J3-iCs" id="124-cN-3Ng"/>
+            </connections>
+            <point key="canvasLocation" x="195" y="745"/>
+        </collectionViewCell>
+    </objects>
+</document>

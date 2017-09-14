@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TMContactsCollectionViewCell" id="6JO-7f-5jC" customClass="TMContactsCollectionViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4K2-eD-cxF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIVE A GIFT TO:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6l-62-Jra" customClass="TMLabel" customModule="Dev">
+                                <rect key="frame" x="8" y="30" width="304" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Els-sd-8dK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="12"/>
+                                <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact-icon" translatesAutoresizingMaskIntoConstraints="NO" id="jUc-Ck-Wtr">
+                                <rect key="frame" x="141" y="57" width="40" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="iZ6-T8-JJz"/>
+                                    <constraint firstAttribute="width" constant="40" id="ybG-Ao-bEq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s6l-62-Jra" firstAttribute="leading" secondItem="4K2-eD-cxF" secondAttribute="leadingMargin" id="AGM-WV-Luu"/>
+                            <constraint firstItem="s6l-62-Jra" firstAttribute="centerX" secondItem="4K2-eD-cxF" secondAttribute="centerX" id="aAo-nQ-aY8"/>
+                            <constraint firstItem="s6l-62-Jra" firstAttribute="top" secondItem="4K2-eD-cxF" secondAttribute="top" constant="30" id="fQC-xC-pqu"/>
+                            <constraint firstItem="jUc-Ck-Wtr" firstAttribute="top" secondItem="s6l-62-Jra" secondAttribute="bottom" constant="15" id="g1V-dn-vNp"/>
+                            <constraint firstItem="s6l-62-Jra" firstAttribute="trailing" secondItem="4K2-eD-cxF" secondAttribute="trailingMargin" id="goi-nf-xAn"/>
+                            <constraint firstItem="jUc-Ck-Wtr" firstAttribute="centerX" secondItem="4K2-eD-cxF" secondAttribute="centerX" constant="1" id="mBN-W1-wrP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4K2-eD-cxF" secondAttribute="trailing" id="Zw2-QM-ALs"/>
+                <constraint firstItem="4K2-eD-cxF" firstAttribute="top" secondItem="6JO-7f-5jC" secondAttribute="top" id="aaA-aE-8ED"/>
+                <constraint firstAttribute="bottom" secondItem="4K2-eD-cxF" secondAttribute="bottom" id="iBi-u0-cn6"/>
+                <constraint firstItem="4K2-eD-cxF" firstAttribute="leading" secondItem="6JO-7f-5jC" secondAttribute="leading" id="pam-9Z-rqV"/>
+            </constraints>
+            <connections>
+                <outlet property="container" destination="4K2-eD-cxF" id="mvK-tN-hkr"/>
+            </connections>
+            <point key="canvasLocation" x="-133" y="187"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="contact-icon" width="38" height="26"/>
+    </resources>
+</document>

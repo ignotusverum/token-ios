@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Medium.otf">
+            <string>Acta-Medium</string>
+        </array>
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TMAddressBlackTableViewCell" id="Ub0-v1-bTr" customClass="TMAddressBlackTableViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ub0-v1-bTr" id="ZsA-CJ-cz7">
+                <frame key="frameInset" width="320" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flv-Rr-Gv1">
+                        <fontDescription key="fontDescription" name="Acta-Medium" family="Acta" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6u-Cl-PRg">
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="14"/>
+                        <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Address_unselected" translatesAutoresizingMaskIntoConstraints="NO" id="fAl-Cp-M6l">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="8Jl-27-RZn"/>
+                            <constraint firstAttribute="width" constant="22" id="Fju-zp-Tvg"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-dN-fXB">
+                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" image="Pencil"/>
+                        <connections>
+                            <action selector="editAddressButtonPressed:" destination="Ub0-v1-bTr" eventType="touchUpInside" id="qDB-gU-3Uu"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-P4-DTM">
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="HAp-tr-Xvv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Flv-Rr-Gv1" firstAttribute="trailing" secondItem="v6u-Cl-PRg" secondAttribute="trailing" id="4Hz-Br-b6u"/>
+                    <constraint firstItem="v6u-Cl-PRg" firstAttribute="leading" secondItem="ZsA-CJ-cz7" secondAttribute="leadingMargin" constant="62" id="6Zm-eR-PeB"/>
+                    <constraint firstItem="Flv-Rr-Gv1" firstAttribute="top" secondItem="ZsA-CJ-cz7" secondAttribute="topMargin" constant="19" id="FfB-Na-KAx"/>
+                    <constraint firstItem="fAl-Cp-M6l" firstAttribute="centerY" secondItem="Flv-Rr-Gv1" secondAttribute="centerY" constant="3.5" id="HSX-ee-JMK"/>
+                    <constraint firstItem="fAl-Cp-M6l" firstAttribute="leading" secondItem="ZsA-CJ-cz7" secondAttribute="leadingMargin" constant="12" id="JEe-kV-XzD"/>
+                    <constraint firstItem="qC4-P4-DTM" firstAttribute="centerX" secondItem="ZsA-CJ-cz7" secondAttribute="centerX" id="Mnm-rI-nE3"/>
+                    <constraint firstItem="qC4-P4-DTM" firstAttribute="leading" secondItem="fAl-Cp-M6l" secondAttribute="leading" constant="-10" id="Tuv-3V-B1J"/>
+                    <constraint firstAttribute="trailing" secondItem="DRE-dN-fXB" secondAttribute="trailing" id="Zpl-mW-I1H"/>
+                    <constraint firstItem="fAl-Cp-M6l" firstAttribute="top" secondItem="ZsA-CJ-cz7" secondAttribute="topMargin" constant="20" id="kkC-4F-7lD"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qC4-P4-DTM" secondAttribute="bottom" constant="-6.5" id="lWP-X2-zq2"/>
+                    <constraint firstItem="qC4-P4-DTM" firstAttribute="top" secondItem="DRE-dN-fXB" secondAttribute="bottom" constant="57" id="nkJ-Pv-8Dl"/>
+                    <constraint firstItem="DRE-dN-fXB" firstAttribute="top" secondItem="ZsA-CJ-cz7" secondAttribute="top" id="pln-bq-9w7"/>
+                    <constraint firstItem="Flv-Rr-Gv1" firstAttribute="leading" secondItem="fAl-Cp-M6l" secondAttribute="trailing" constant="28" id="quF-ez-4Eg"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="v6u-Cl-PRg" secondAttribute="trailing" constant="55" id="rEY-LX-oiA"/>
+                    <constraint firstItem="Flv-Rr-Gv1" firstAttribute="leading" secondItem="v6u-Cl-PRg" secondAttribute="leading" id="yz4-w0-x6c"/>
+                    <constraint firstItem="DRE-dN-fXB" firstAttribute="leading" secondItem="Flv-Rr-Gv1" secondAttribute="trailing" constant="1" id="zAD-XW-Eb8"/>
+                    <constraint firstItem="v6u-Cl-PRg" firstAttribute="top" secondItem="Flv-Rr-Gv1" secondAttribute="bottom" constant="8" symbolic="YES" id="zPO-7Y-whv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="addressLabel" destination="v6u-Cl-PRg" id="Vjc-jS-T6b"/>
+                <outlet property="editingButton" destination="DRE-dN-fXB" id="FGR-wg-VFE"/>
+                <outlet property="selectionImageView" destination="fAl-Cp-M6l" id="IYK-Nl-szf"/>
+                <outlet property="titleLabel" destination="Flv-Rr-Gv1" id="5sg-u3-34n"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Address_unselected" width="25" height="25"/>
+        <image name="Pencil" width="16" height="16"/>
+    </resources>
+</document>

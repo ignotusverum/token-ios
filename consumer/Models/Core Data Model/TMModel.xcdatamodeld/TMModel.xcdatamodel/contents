@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="TMCart" representedClassName="TMCart" parentEntity="TMModel" syncable="YES">
+        <attribute name="destination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shippingMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subtotal" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalFee" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalShipping" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalTax" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wrappingID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMContactAddress" inverseName="cart" inverseEntity="TMContactAddress" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TMCartItem" inverseName="cart" inverseEntity="TMCartItem" syncable="YES"/>
+        <relationship name="label" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMCartLabel" inverseName="cart" inverseEntity="TMCartLabel" syncable="YES"/>
+        <relationship name="orderType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMShippingType" inverseName="cart" inverseEntity="TMShippingType" syncable="YES"/>
+        <relationship name="payment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMPayment" inverseName="cart" inverseEntity="TMPayment" syncable="YES"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TMRequest" inverseName="cart" inverseEntity="TMRequest" syncable="YES"/>
+    </entity>
+    <entity name="TMCartItem" representedClassName="TMCartItem" parentEntity="TMModel" syncable="YES">
+        <attribute name="cartID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="productID" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="variantID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMCart" inverseName="items" inverseEntity="TMCart" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMProduct" inverseName="cartItem" inverseEntity="TMProduct" syncable="YES"/>
+    </entity>
+    <entity name="TMCartLabel" representedClassName="TMCartLabel" parentEntity="TMModel" syncable="YES">
+        <attribute name="cartID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="from" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMCart" inverseName="label" inverseEntity="TMCart" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMOrder" inverseName="label" inverseEntity="TMOrder" syncable="YES"/>
+    </entity>
+    <entity name="TMContact" representedClassName="TMContact" parentEntity="TMModel" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="middleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="TMContactAddress" inverseName="contact" inverseEntity="TMContactAddress" syncable="YES"/>
+        <relationship name="request" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TMRequest" inverseName="contact" inverseEntity="TMRequest" syncable="YES"/>
+    </entity>
+    <entity name="TMContactAddress" representedClassName="TMContactAddress" parentEntity="TMModel" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMCart" inverseName="address" inverseEntity="TMCart" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMContact" inverseName="addresses" inverseEntity="TMContact" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMOrder" inverseName="shippingAddress" inverseEntity="TMOrder" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMUser" inverseName="addresses" inverseEntity="TMUser" syncable="YES"/>
+    </entity>
+    <entity name="TMImage" representedClassName="TMImage" parentEntity="TMModel" syncable="YES">
+        <attribute name="imageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="src" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="productv" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMProduct" inverseName="images" inverseEntity="TMProduct" syncable="YES"/>
+        <relationship name="recommendation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMRecommendation" inverseName="images" inverseEntity="TMRecommendation" syncable="YES"/>
+    </entity>
+    <entity name="TMItem" representedClassName="TMItem" parentEntity="TMModel" syncable="YES">
+        <attribute name="isRemoved" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="1" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="recommendationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMProduct" inverseName="item" inverseEntity="TMProduct" syncable="YES"/>
+        <relationship name="recommendation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMRecommendation" inverseName="items" inverseEntity="TMRecommendation" syncable="YES"/>
+    </entity>
+    <entity name="TMLineItem" representedClassName="TMLineItem" parentEntity="TMModel" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="productID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="shippingRequired" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sku" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taxable" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="variantID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMOrder" inverseName="lineItems" inverseEntity="TMOrder" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMProduct" inverseName="lineItem" inverseEntity="TMProduct" syncable="YES"/>
+    </entity>
+    <entity name="TMModel" representedClassName="TMModel" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="TMNotificationActivity" representedClassName="TMNotificationActivity" syncable="YES">
+        <attribute name="actor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="object" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="verb" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMNotificationGroup" inverseName="activity" inverseEntity="TMNotificationGroup" syncable="YES"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMRequest" inverseName="activities" inverseEntity="TMRequest" syncable="YES"/>
+    </entity>
+    <entity name="TMNotificationGroup" representedClassName="TMNotificationGroup" parentEntity="TMModel" syncable="YES">
+        <attribute name="activityCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="actorCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isRead" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="verb" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activity" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TMNotificationActivity" inverseName="group" inverseEntity="TMNotificationActivity" syncable="YES"/>
+    </entity>
+    <entity name="TMOrder" representedClassName="TMOrder" parentEntity="TMModel" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subTotal" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalPrice" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalShipping" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalTax" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="label" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMCartLabel" inverseName="order" inverseEntity="TMCartLabel" syncable="YES"/>
+        <relationship name="lineItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TMLineItem" inverseName="order" inverseEntity="TMLineItem" syncable="YES"/>
+        <relationship name="payment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMPayment" inverseName="order" inverseEntity="TMPayment" syncable="YES"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TMRequest" inverseName="order" inverseEntity="TMRequest" syncable="YES"/>
+        <relationship name="shippingAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMContactAddress" inverseName="order" inverseEntity="TMContactAddress" syncable="YES"/>
+        <relationship name="taxLines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TMTaxLine" inverseName="order" inverseEntity="TMTaxLine" syncable="YES"/>
+    </entity>
+    <entity name="TMPayment" representedClassName="TMPayment" parentEntity="TMModel" syncable="YES">
+        <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expirationMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expirationYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="externalID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fingerprint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDefault" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMCart" inverseName="payment" inverseEntity="TMCart" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMOrder" inverseName="payment" inverseEntity="TMOrder" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMUser" inverseName="cards" inverseEntity="TMUser" syncable="YES"/>
+    </entity>
+    <entity name="TMProduct" representedClassName="TMProduct" parentEntity="TMModel" syncable="YES">
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localUpdatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="productDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vendorID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cartItem" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TMCartItem" inverseName="product" inverseEntity="TMCartItem" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TMImage" inverseName="productv" inverseEntity="TMImage" syncable="YES"/>
+        <relationship name="item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TMItem" inverseName="product" inverseEntity="TMItem" syncable="YES"/>
+        <relationship name="lineItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMLineItem" inverseName="product" inverseEntity="TMLineItem" syncable="YES"/>
+    </entity>
+    <entity name="TMRecommendation" representedClassName="TMRecommendation" parentEntity="TMModel" syncable="YES">
+        <attribute name="published" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="requestID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seen" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="statusString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TMImage" inverseName="recommendation" inverseEntity="TMImage" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TMItem" inverseName="recommendation" inverseEntity="TMItem" syncable="YES"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMRequest" inverseName="recommendations" inverseEntity="TMRequest" syncable="YES"/>
+    </entity>
+    <entity name="TMRequest" representedClassName="TMRequest" parentEntity="TMModel" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cartID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channelID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="occasion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceHigh" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="priceLow" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="receiverName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seen" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="statusString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TMNotificationActivity" inverseName="request" inverseEntity="TMNotificationActivity" syncable="YES"/>
+        <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TMRequestAttribute" inverseName="request" inverseEntity="TMRequestAttribute" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TMCart" inverseName="request" inverseEntity="TMCart" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMContact" inverseName="request" inverseEntity="TMContact" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TMOrder" inverseName="request" inverseEntity="TMOrder" syncable="YES"/>
+        <relationship name="recommendations" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="TMRecommendation" inverseName="request" inverseEntity="TMRecommendation" syncable="YES"/>
+    </entity>
+    <entity name="TMRequestAttribute" representedClassName="TMRequestAttribute" parentEntity="TMModel" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="request" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TMRequest" inverseName="attributes" inverseEntity="TMRequest" syncable="YES"/>
+    </entity>
+    <entity name="TMShippingType" representedClassName="TMShippingType" parentEntity="TMModel" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="displayPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMCart" inverseName="orderType" inverseEntity="TMCart" syncable="YES"/>
+    </entity>
+    <entity name="TMTaxLine" representedClassName="TMTaxLine" parentEntity="TMModel" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TMOrder" inverseName="taxLines" inverseEntity="TMOrder" syncable="YES"/>
+    </entity>
+    <entity name="TMUser" representedClassName="TMUser" parentEntity="TMModel" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumberFormatted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumberRaw" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TMContactAddress" inverseName="user" inverseEntity="TMContactAddress" syncable="YES"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="TMPayment" inverseName="user" inverseEntity="TMPayment" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TMCart" positionX="-666" positionY="471" width="128" height="270"/>
+        <element name="TMCartItem" positionX="-2457" positionY="-369" width="128" height="165"/>
+        <element name="TMCartLabel" positionX="133" positionY="-117" width="128" height="135"/>
+        <element name="TMContact" positionX="-846" positionY="231" width="128" height="195"/>
+        <element name="TMContactAddress" positionX="-2448" positionY="-432" width="128" height="255"/>
+        <element name="TMImage" positionX="-1989" positionY="216" width="128" height="120"/>
+        <element name="TMItem" positionX="-2178" positionY="216" width="128" height="165"/>
+        <element name="TMLineItem" positionX="-2160" positionY="36" width="128" height="240"/>
+        <element name="TMModel" positionX="-846" positionY="-549" width="128" height="90"/>
+        <element name="TMNotificationActivity" positionX="-2484" positionY="-396" width="128" height="165"/>
+        <element name="TMNotificationGroup" positionX="-2475" positionY="-387" width="128" height="135"/>
+        <element name="TMOrder" positionX="-2169" positionY="27" width="128" height="270"/>
+        <element name="TMPayment" positionX="-146" positionY="-351" width="128" height="270"/>
+        <element name="TMProduct" positionX="-882" positionY="-27" width="128" height="210"/>
+        <element name="TMRecommendation" positionX="-2691" positionY="36" width="128" height="165"/>
+        <element name="TMRequest" positionX="-1890" positionY="624" width="128" height="360"/>
+        <element name="TMRequestAttribute" positionX="279" positionY="342" width="128" height="105"/>
+        <element name="TMShippingType" positionX="-2484" positionY="-396" width="128" height="150"/>
+        <element name="TMTaxLine" positionX="-2151" positionY="45" width="128" height="150"/>
+        <element name="TMUser" positionX="-38" positionY="297" width="128" height="180"/>
+    </elements>
+</model>

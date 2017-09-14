@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Bold.otf">
+            <string>Acta-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMWhiteListViewController" customModule="Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="DLX-iS-Vuv" id="be9-Zx-bYI"/>
+                <outlet property="copyLabel" destination="q2a-FT-BXR" id="EQb-iH-Jo4"/>
+                <outlet property="inviteButton" destination="3p5-MT-Oc0" id="gu4-JE-b2Z"/>
+                <outlet property="titleLabel" destination="2vb-cy-nm4" id="PWJ-Xf-Xm5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="614"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLX-iS-Vuv">
+                    <rect key="frame" x="0.0" y="0.0" width="64" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="P6x-Ad-Wee"/>
+                        <constraint firstAttribute="height" constant="71" id="kYI-vQ-Sj9"/>
+                    </constraints>
+                    <state key="normal" image="closeButton"/>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="PBx-Wi-r6E"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vb-cy-nm4">
+                    <rect key="frame" x="16" y="44" width="288" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="dYZ-5z-dO4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Acta-Bold" family="Acta" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Invitation_icon" translatesAutoresizingMaskIntoConstraints="NO" id="YWk-ss-fNC">
+                    <rect key="frame" x="75" y="117" width="170" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="Xdp-NP-jqN"/>
+                        <constraint firstAttribute="height" constant="120" id="jUb-Z6-wjk"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2a-FT-BXR">
+                    <rect key="frame" x="30" y="277" width="260" height="196"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3p5-MT-Oc0" customClass="TMStandartButton" customModule="Dev" customModuleProvider="target">
+                    <rect key="frame" x="71" y="514" width="176" height="64"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.8862745098" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="176" id="l44-aH-DcT"/>
+                        <constraint firstAttribute="height" constant="64" id="rWQ-Dx-Hwh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="GET AN INVITE">
+                        <color key="titleColor" red="0.1058823529" green="0.098039215690000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.1058823529" green="0.098039215690000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="invitationButtonPressed:" destination="-1" eventType="touchUpInside" id="UR1-tj-0QD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="q2a-FT-BXR" firstAttribute="top" secondItem="YWk-ss-fNC" secondAttribute="bottom" constant="40" id="5tc-LS-bYS"/>
+                <constraint firstItem="2vb-cy-nm4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="5yP-sy-s4j"/>
+                <constraint firstAttribute="trailing" secondItem="q2a-FT-BXR" secondAttribute="trailing" constant="30" id="GaR-Cr-1y4"/>
+                <constraint firstItem="2vb-cy-nm4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="HnK-Dk-ig1"/>
+                <constraint firstItem="DLX-iS-Vuv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J3Z-LG-hdz"/>
+                <constraint firstItem="2vb-cy-nm4" firstAttribute="centerX" secondItem="YWk-ss-fNC" secondAttribute="centerX" id="R8z-Oz-AHJ"/>
+                <constraint firstItem="q2a-FT-BXR" firstAttribute="centerX" secondItem="3p5-MT-Oc0" secondAttribute="centerX" constant="1" id="dYs-QK-ppN"/>
+                <constraint firstItem="YWk-ss-fNC" firstAttribute="top" secondItem="2vb-cy-nm4" secondAttribute="bottom" constant="40" id="fzS-1c-1dO"/>
+                <constraint firstItem="DLX-iS-Vuv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ia9-Dy-N2z"/>
+                <constraint firstAttribute="bottom" secondItem="3p5-MT-Oc0" secondAttribute="bottom" constant="36" id="ief-JN-W1W"/>
+                <constraint firstItem="2vb-cy-nm4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nnn-c1-B9J"/>
+                <constraint firstItem="q2a-FT-BXR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="vir-43-OuO"/>
+                <constraint firstItem="3p5-MT-Oc0" firstAttribute="top" secondItem="q2a-FT-BXR" secondAttribute="bottom" constant="41" id="yu7-us-3vT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Invitation_icon" width="89" height="64"/>
+        <image name="closeButton" width="23" height="23"/>
+    </resources>
+</document>

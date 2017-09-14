@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMCartQuantityControl" customModule="Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="oUc-cR-tAt" id="u1X-iD-X0q"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9yt-aS-yTu"/>
+                <outletCollection property="buttons" destination="wWd-Nh-Uf9" collectionClass="NSMutableArray" id="IWu-ga-azm"/>
+                <outletCollection property="buttons" destination="I5t-44-eRD" collectionClass="NSMutableArray" id="7hE-WE-yJS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="43" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUc-cR-tAt">
+                    <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWd-Nh-Uf9">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="PO5-yX-RAD"/>
+                    </constraints>
+                    <state key="normal" image="uparrow"/>
+                    <connections>
+                        <action selector="quantityButtonPressed:" destination="-1" eventType="touchUpInside" id="U41-U9-bXG"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5t-44-eRD">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="down_arrow"/>
+                    <connections>
+                        <action selector="quantityButtonPressed:" destination="-1" eventType="touchUpInside" id="8cd-UO-Jgl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wWd-Nh-Uf9" secondAttribute="trailing" id="LA2-JC-N4u"/>
+                <constraint firstItem="oUc-cR-tAt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SKX-XJ-Xbw"/>
+                <constraint firstItem="wWd-Nh-Uf9" firstAttribute="leading" secondItem="oUc-cR-tAt" secondAttribute="leading" id="gfQ-qB-nQu"/>
+                <constraint firstItem="wWd-Nh-Uf9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jNc-bQ-WWi"/>
+                <constraint firstAttribute="bottom" secondItem="I5t-44-eRD" secondAttribute="bottom" id="mPP-pe-SKU"/>
+                <constraint firstItem="oUc-cR-tAt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="n8E-dq-Pq2"/>
+                <constraint firstItem="oUc-cR-tAt" firstAttribute="leading" secondItem="I5t-44-eRD" secondAttribute="leading" id="ntp-j7-bkU"/>
+                <constraint firstItem="oUc-cR-tAt" firstAttribute="trailing" secondItem="I5t-44-eRD" secondAttribute="trailing" id="oLV-6F-FQE"/>
+                <constraint firstItem="wWd-Nh-Uf9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="v83-YH-fTq"/>
+                <constraint firstItem="wWd-Nh-Uf9" firstAttribute="trailing" secondItem="oUc-cR-tAt" secondAttribute="trailing" id="zKn-xv-GKj"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="682.5" y="791.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down_arrow" width="12" height="6"/>
+        <image name="uparrow" width="12" height="6"/>
+    </resources>
+</document>

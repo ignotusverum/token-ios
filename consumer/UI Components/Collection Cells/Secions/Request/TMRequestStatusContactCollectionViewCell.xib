@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TMRequestStatusContactCollectionViewCell" id="xbv-tt-xqf" customClass="TMRequestStatusContactCollectionViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="215"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NZ-SI-32b" customClass="TMRequestInfoStatusView" customModule="Dev" customModuleProvider="target">
+                        <rect key="frame" x="78" y="0.0" width="240" height="202"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFy-eU-EmI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="60z-ao-KEg"/>
+                            <constraint firstAttribute="height" constant="1" id="yTp-CZ-3se"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="60z-ao-KEg"/>
+                                <exclude reference="yTp-CZ-3se"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="60z-ao-KEg"/>
+                                <include reference="yTp-CZ-3se"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="PFy-eU-EmI" firstAttribute="top" secondItem="5NZ-SI-32b" secondAttribute="bottom" constant="1" id="27O-NT-Rds"/>
+                <constraint firstItem="5NZ-SI-32b" firstAttribute="leading" secondItem="xbv-tt-xqf" secondAttribute="leadingMargin" constant="70" id="5uJ-dL-8OS"/>
+                <constraint firstAttribute="bottom" secondItem="5NZ-SI-32b" secondAttribute="bottom" constant="13" id="J3z-Ua-eE6"/>
+                <constraint firstItem="5NZ-SI-32b" firstAttribute="centerX" secondItem="xbv-tt-xqf" secondAttribute="centerX" id="eGr-ra-dYT"/>
+                <constraint firstItem="PFy-eU-EmI" firstAttribute="leading" secondItem="xbv-tt-xqf" secondAttribute="leadingMargin" constant="78" id="flP-Ot-1iv"/>
+                <constraint firstItem="5NZ-SI-32b" firstAttribute="top" secondItem="xbv-tt-xqf" secondAttribute="top" id="yTq-eE-sNb"/>
+                <constraint firstAttribute="bottom" secondItem="5NZ-SI-32b" secondAttribute="bottom" id="zaB-Oi-SZQ"/>
+            </constraints>
+            <size key="customSize" width="396" height="215"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="5NZ-SI-32b"/>
+                    <exclude reference="PFy-eU-EmI"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="yTq-eE-sNb"/>
+                    <exclude reference="5uJ-dL-8OS"/>
+                    <exclude reference="J3z-Ua-eE6"/>
+                    <exclude reference="zaB-Oi-SZQ"/>
+                    <exclude reference="eGr-ra-dYT"/>
+                    <exclude reference="27O-NT-Rds"/>
+                    <exclude reference="flP-Ot-1iv"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="5NZ-SI-32b"/>
+                    <exclude reference="PFy-eU-EmI"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="yTq-eE-sNb"/>
+                    <include reference="5uJ-dL-8OS"/>
+                    <include reference="J3z-Ua-eE6"/>
+                    <exclude reference="zaB-Oi-SZQ"/>
+                    <include reference="eGr-ra-dYT"/>
+                    <include reference="27O-NT-Rds"/>
+                    <include reference="flP-Ot-1iv"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="requestStatusView" destination="5NZ-SI-32b" id="GaJ-ga-94f"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

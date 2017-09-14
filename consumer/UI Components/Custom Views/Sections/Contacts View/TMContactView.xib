@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Medium.otf">
+            <string>Acta-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMContactView" customModule="Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="bowImageView" destination="ZmA-lM-vOX" id="DQv-ba-xJt"/>
+                <outlet property="containerView" destination="Vt4-Yq-9lx" id="Nmi-eo-hbC"/>
+                <outlet property="fullNameLabel" destination="9Tn-jU-ckj" id="NiV-eS-1Yi"/>
+                <outlet property="selectedCheckmarkImageView" destination="QCG-d0-3FT" id="V6F-JV-Sty"/>
+                <outlet property="view" destination="Mkl-kJ-Nx2" id="fkX-zZ-thW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Mkl-kJ-Nx2">
+            <rect key="frame" x="0.0" y="0.0" width="167" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vt4-Yq-9lx">
+                    <rect key="frame" x="50" y="0.0" width="68" height="68"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-wax" translatesAutoresizingMaskIntoConstraints="NO" id="ZmA-lM-vOX">
+                            <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="20T-g7-pov"/>
+                        <constraint firstAttribute="trailing" secondItem="ZmA-lM-vOX" secondAttribute="trailing" id="IrM-s6-L2n"/>
+                        <constraint firstAttribute="bottom" secondItem="ZmA-lM-vOX" secondAttribute="bottom" id="jYv-Ku-4ii"/>
+                        <constraint firstItem="ZmA-lM-vOX" firstAttribute="top" secondItem="Vt4-Yq-9lx" secondAttribute="top" id="sOt-lx-0KN"/>
+                        <constraint firstItem="ZmA-lM-vOX" firstAttribute="leading" secondItem="Vt4-Yq-9lx" secondAttribute="leading" id="ti7-QZ-CS0"/>
+                        <constraint firstAttribute="width" constant="68" id="yNE-6v-Mvf"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tn-jU-ckj">
+                    <rect key="frame" x="0.0" y="87" width="167" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="QT3-IN-YgD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Acta-Medium" family="Acta" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckCircle" translatesAutoresizingMaskIntoConstraints="NO" id="QCG-d0-3FT">
+                    <rect key="frame" x="100" y="44" width="26" height="26"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9Tn-jU-ckj" secondAttribute="trailing" id="8BH-ui-X9u"/>
+                <constraint firstItem="QCG-d0-3FT" firstAttribute="top" secondItem="ZmA-lM-vOX" secondAttribute="bottom" constant="-24" id="BAP-Dm-sij"/>
+                <constraint firstItem="Vt4-Yq-9lx" firstAttribute="top" secondItem="Mkl-kJ-Nx2" secondAttribute="top" id="Qis-DA-NUJ"/>
+                <constraint firstItem="9Tn-jU-ckj" firstAttribute="leading" secondItem="Mkl-kJ-Nx2" secondAttribute="leading" id="g5Z-Jn-FgJ"/>
+                <constraint firstItem="9Tn-jU-ckj" firstAttribute="top" secondItem="Vt4-Yq-9lx" secondAttribute="bottom" constant="19" id="mHe-ZV-YVd"/>
+                <constraint firstItem="QCG-d0-3FT" firstAttribute="leading" secondItem="ZmA-lM-vOX" secondAttribute="trailing" constant="-18" id="nUo-ZF-3vr"/>
+                <constraint firstItem="Vt4-Yq-9lx" firstAttribute="centerX" secondItem="9Tn-jU-ckj" secondAttribute="centerX" id="p88-x1-Kz0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="817" y="537"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CheckCircle" width="26" height="26"/>
+        <image name="default-wax" width="170" height="170"/>
+    </resources>
+</document>

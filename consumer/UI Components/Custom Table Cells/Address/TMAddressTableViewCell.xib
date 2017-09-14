@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Medium.otf">
+            <string>Acta-Medium</string>
+        </array>
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addressCell" id="KGk-i7-Jjw" customClass="TMAddressTableViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvN-hs-IcN">
+                        <fontDescription key="fontDescription" name="Acta-Medium" family="Acta" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Address_unselected" translatesAutoresizingMaskIntoConstraints="NO" id="Keh-Tu-Gmc">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="6nV-Pq-9Oq"/>
+                            <constraint firstAttribute="height" constant="25" id="q9U-5V-uBA"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8P-mb-Xja">
+                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" image="Pencil"/>
+                        <connections>
+                            <action selector="editAddressButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BZn-ev-thI"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuQ-TS-uPx">
+                        <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ZhK-7F-fLD"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGY-g5-LZ0">
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="14"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="u8P-mb-Xja" secondAttribute="trailing" id="5CK-tS-npg"/>
+                    <constraint firstItem="rGY-g5-LZ0" firstAttribute="top" secondItem="KvN-hs-IcN" secondAttribute="bottom" constant="8" symbolic="YES" id="7UT-Mk-Tac"/>
+                    <constraint firstItem="KvN-hs-IcN" firstAttribute="leading" secondItem="rGY-g5-LZ0" secondAttribute="leading" id="9UB-4O-tc2"/>
+                    <constraint firstItem="KvN-hs-IcN" firstAttribute="trailing" secondItem="rGY-g5-LZ0" secondAttribute="trailing" id="9wB-xY-1Jn"/>
+                    <constraint firstItem="KvN-hs-IcN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="B8M-V6-JjQ"/>
+                    <constraint firstItem="Keh-Tu-Gmc" firstAttribute="centerY" secondItem="KvN-hs-IcN" secondAttribute="centerY" id="CEd-6e-uUm"/>
+                    <constraint firstItem="JuQ-TS-uPx" firstAttribute="top" secondItem="u8P-mb-Xja" secondAttribute="bottom" constant="57" id="IBL-GB-VZO"/>
+                    <constraint firstItem="Keh-Tu-Gmc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="LRK-Hl-tKe"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JuQ-TS-uPx" secondAttribute="bottom" constant="-6.5" id="Oru-k1-VmK"/>
+                    <constraint firstItem="rGY-g5-LZ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="62" id="QwD-kb-kfR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rGY-g5-LZ0" secondAttribute="trailing" constant="55" id="Thi-45-XqZ"/>
+                    <constraint firstItem="u8P-mb-Xja" firstAttribute="leading" secondItem="KvN-hs-IcN" secondAttribute="trailing" constant="1" id="Xz1-Lp-Wsu"/>
+                    <constraint firstItem="u8P-mb-Xja" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mnV-Wt-bbO"/>
+                    <constraint firstItem="JuQ-TS-uPx" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ot4-7L-92Y"/>
+                    <constraint firstItem="JuQ-TS-uPx" firstAttribute="leading" secondItem="Keh-Tu-Gmc" secondAttribute="leading" constant="-10" id="u7k-ic-u2a"/>
+                    <constraint firstItem="Keh-Tu-Gmc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="vic-pp-m2C"/>
+                    <constraint firstItem="KvN-hs-IcN" firstAttribute="leading" secondItem="Keh-Tu-Gmc" secondAttribute="trailing" constant="25" id="w5x-MB-elf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="addressLabel" destination="rGY-g5-LZ0" id="lX0-RT-Re1"/>
+                <outlet property="editingButton" destination="u8P-mb-Xja" id="0vh-7U-g38"/>
+                <outlet property="selectionImageView" destination="Keh-Tu-Gmc" id="mGf-vO-k10"/>
+                <outlet property="titleLabel" destination="KvN-hs-IcN" id="itN-5U-FxZ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Address_unselected" width="25" height="25"/>
+        <image name="Pencil" width="16" height="16"/>
+    </resources>
+</document>

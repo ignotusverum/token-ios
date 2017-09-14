@@ -1,0 +1,24 @@
+//
+//  <$managedObjectClassName$>.swift
+//  consumer
+//
+//  Created by Token on 2/3/16.
+//  Copyright © 2016 Token All rights reserved.
+//
+
+import CoreStore
+<<<<<<< HEAD
+import PromiseKit
+=======
+>>>>>>> 64fd0b7b8a2f44c82febd924e3b072552c006849
+import SwiftyJSON
+
+@objc(<$managedObjectClassName$>)
+public class <$managedObjectClassName$>: _<$managedObjectClassName$> {
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 64fd0b7b8a2f44c82febd924e3b072552c006849
+}

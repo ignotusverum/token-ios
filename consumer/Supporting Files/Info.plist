@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.10</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.token.token</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tkn</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>420</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>5354d285e7b50be714bb8e86c43efbe1d2357f52</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>mobile-api.token.network</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Used for gift information</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used for payment information</string>
+	<key>NSContactsUsageDescription</key>
+	<string>To automatically fill out information like names and addresses. We won’t send anything to your contacts.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Used to set your profile picture</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mallory-Light.otf</string>
+		<string>Acta-BookItalic.otf</string>
+		<string>Mallory-LightItalic.otf</string>
+		<string>Acta-LightItalic.otf</string>
+		<string>Mallory-ExtraLight.otf</string>
+		<string>DSType - Acta-Bold.otf</string>
+		<string>DSType - Acta-Book.otf</string>
+		<string>DSType - Acta-Medium.otf</string>
+		<string>Mallory-Bold.otf</string>
+		<string>Mallory-Book.otf</string>
+		<string>MalloryMP-Medium.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>branch_key</key>
+	<dict>
+		<key>live</key>
+		<string>key_live_mbwwgKaQkPwWmVTPVu9ujlfjxvhwKkDe</string>
+		<key>test</key>
+		<string>key_test_iowrnOfVdTtYjVSSPv4yKkhhxwpAKmCr</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,155 @@
+PODS:
+  - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
+  - Analytics (3.6.1)
+  - AsyncDisplayKit (2.2.1):
+    - AsyncDisplayKit/PINRemoteImage (= 2.2.1)
+  - AsyncDisplayKit/Core (2.2.1)
+  - AsyncDisplayKit/PINRemoteImage (2.2.1):
+    - AsyncDisplayKit/Core
+    - PINRemoteImage/iOS (= 3.0.0-beta.8)
+    - PINRemoteImage/PINCache
+  - BKMoneyKit (0.0.12)
+  - Branch (0.15.3):
+    - Branch/Core (= 0.15.3)
+    - Branch/without-IDFA (= 0.15.3)
+  - Branch/Core (0.15.3)
+  - Branch/without-IDFA (0.15.3)
+  - BuddyBuildSDK (1.0.16)
+  - CardIO (5.4.1)
+  - CoreStore (3.1.1)
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - EZSwiftExtensions (1.9)
+  - EZSwipeController (0.6.1)
+  - Fabric (1.6.11)
+  - GoogleAnalytics (3.17.0)
+  - GoogleIDFASupport (3.14.0)
+  - IGListKit (2.0.0)
+  - IQDropDownTextField (1.1.0)
+  - IQKeyboardManagerSwift (4.0.9)
+  - JDStatusBarNotification (1.5.5)
+  - KeychainAccess (3.0.2)
+  - Masonry (1.0.2)
+  - Mixpanel (3.1.5)
+  - NSString+RemoveEmoji (1.0.4)
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.8)
+  - PINRemoteImage/iOS (3.0.0-beta.8):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.8):
+    - PINCache (= 3.0.1-beta.4)
+    - PINRemoteImage/Core
+  - pop (1.0.9)
+  - PopupDialog (0.5.4)
+  - PromiseKit (4.2.2):
+    - PromiseKit/Foundation (= 4.2.2)
+    - PromiseKit/QuartzCore (= 4.2.2)
+    - PromiseKit/UIKit (= 4.2.2)
+  - PromiseKit/CorePromise (4.2.2)
+  - PromiseKit/Foundation (4.2.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.2.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.2.2):
+    - PromiseKit/CorePromise
+  - ReachabilitySwift (3)
+  - Segment-Branch (0.1.2):
+    - Analytics
+    - Branch
+  - Segment-Mixpanel (1.2.0):
+    - Analytics (~> 3.0)
+    - Mixpanel (~> 3.0)
+  - Spruce (1.0.0)
+  - Stripe (10.1.0)
+  - SVProgressHUD (2.1.2)
+  - SwiftyJSON (3.1.4)
+  - TwilioChatClient (1.0.0)
+  - UITextView+Placeholder (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - Analytics
+  - AsyncDisplayKit
+  - BKMoneyKit
+  - BuddyBuildSDK
+  - CardIO
+  - CoreStore (~> 3.1.1)
+  - Crashlytics
+  - EZSwiftExtensions
+  - EZSwipeController
+  - Fabric
+  - GoogleAnalytics (~> 3.14)
+  - GoogleIDFASupport (~> 3.14)
+  - IGListKit (~> 2.0.0)
+  - IQDropDownTextField
+  - IQKeyboardManagerSwift
+  - JDStatusBarNotification
+  - KeychainAccess
+  - Masonry
+  - NSString+RemoveEmoji (~> 1.0)
+  - pop
+  - PopupDialog (~> 0.5)
+  - PromiseKit (~> 4.0)
+  - ReachabilitySwift
+  - Segment-Branch
+  - Segment-Mixpanel
+  - Spruce (~> 1.0.0)
+  - Stripe
+  - SVProgressHUD
+  - SwiftyJSON
+  - TwilioChatClient (= 1.0.0)
+  - UITextView+Placeholder
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  Analytics: 32f2d1e0e5499c493450192726b0b42d43606b82
+  AsyncDisplayKit: 2234dd8d8770a5ed72936b3f8394bd5a807765f6
+  BKMoneyKit: 1e075497e9b6d9c3ba37c646dcf647ca6358ec43
+  Branch: d3620efcb86e8eeedfaf520e4f68a2ed4c6c9eb3
+  BuddyBuildSDK: 2c5469eee2981a3365386e46393e97068d75e4f4
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  CoreStore: dce7dc7eb6c379368118d7f2421c01a1b21a3c03
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  EZSwiftExtensions: ce22bf6fc5c6e7c883fec413300b006e123735d0
+  EZSwipeController: 255b0f8aed31963b0236802c926e27dd006a2532
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
+  IGListKit: ee255e4e61865bc3e01ca96b690c5435c2887849
+  IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  JDStatusBarNotification: 2b4f29bd68a60d7aa2f190b5265f1ce59c18aaf8
+  KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Mixpanel: 9b33e5de998cd42597767f67e2b8fcd1d158c71d
+  NSString+RemoveEmoji: 83bf0be3712e87c84c238590d4975da9ffda53e6
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: c4f9f16932840c597f32e69dd288e10e111a1929
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
+  PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Segment-Branch: b8def25f902c0c5201d717ae0dfa2a61849c8f19
+  Segment-Mixpanel: a4c523dbaebecdcfed6a65ecd9c0ea8b430cd8d2
+  Spruce: 07ffdb990923f500111fcbf13d102e16075b230e
+  Stripe: 1c7aa951a075cced500a919d92b687b35d410705
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TwilioChatClient: b980c896945e171e5397564443b2483ccf68f906
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+
+PODFILE CHECKSUM: 92b10967dfbd45ef58159b4eebd7e728ce0eb5a6
+
+COCOAPODS: 1.1.1

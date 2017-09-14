@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MalloryMP-Medium.otf">
+            <string>MalloryMP-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMPriceInfoViewController" customModule="Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="expertLabel" destination="Oxb-5B-T2E" id="imT-zU-iA7"/>
+                <outlet property="priceInfoLabel" destination="m89-JU-bVc" id="Ofy-10-nil"/>
+                <outlet property="shippingLabel" destination="UI1-LH-MtZ" id="ISt-dq-Ec8"/>
+                <outlet property="view" destination="qee-5Q-ONG" id="ydv-i5-03W"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qee-5Q-ONG">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="640"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIv-Xn-Xhw">
+                    <rect key="frame" x="72" y="551" width="196" height="64"/>
+                    <color key="backgroundColor" red="0.49411764705882355" green="0.31372549019607843" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="AA1-oP-dWB"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="LargeCheck">
+                        <color key="titleColor" red="0.1058823529" green="0.098039215690000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.1058823529" green="0.098039215690000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="checkmarkButtonPressed:" destination="-1" eventType="touchUpInside" id="Nik-35-nlm"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olivia" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-Ve-FQH">
+                    <rect key="frame" x="126" y="29" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="9NJ-hJ-txa"/>
+                        <constraint firstAttribute="height" constant="88" id="Fio-Ma-90e"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxb-5B-T2E">
+                    <rect key="frame" x="23" y="137" width="294" height="173"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">Token is made wonderful by our talented Gift Experts, who help you find the world’s best products and expriences to give as thoughtful gifts. They handle the searching, buying, wrapping, handwritten notes, delivery, and they are at your service to help with any other details.</string>
+                            <attributes>
+                                <color key="NSColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="14" name="Acta-Book"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIFT EXPERT FEE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbx-mq-uGt" customClass="TMLabel" customModule="Dev" customModuleProvider="target">
+                    <rect key="frame" x="32" y="339" width="276" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="eml-Pb-X9h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MalloryMP-Medium" family="Mallory MP" pointSize="12"/>
+                    <color key="textColor" red="0.49411764705882355" green="0.31372549019607843" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                            <real key="value" value="2.3999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHIPPING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1k-yW-mXb" customClass="TMLabel" customModule="Dev" customModuleProvider="target">
+                    <rect key="frame" x="31" y="432" width="276" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Anv-Y3-8VT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MalloryMP-Medium" family="Mallory MP" pointSize="12"/>
+                    <color key="textColor" red="0.4941176471" green="0.31372549020000001" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                            <real key="value" value="2.3999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI1-LH-MtZ">
+                    <rect key="frame" x="23" y="459" width="294" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="71" id="zCc-Ec-WIE"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="$5 for standard 5-7 day shipping on most orders. Rush shipping is available for some orders, just chat with your Gift Expert.">
+                            <attributes>
+                                <color key="NSColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="14" name="Acta-Book"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m89-JU-bVc">
+                    <rect key="frame" x="32" y="368" width="276" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="KsZ-mb-fqx"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">10% of the gift price,
+with a $15 maximum per order.</string>
+                            <attributes>
+                                <color key="NSColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="14" name="Acta-LightItalic"/>
+                                <font key="NSOriginalFont" size="11" name="Mallory-LightItalic"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="m89-JU-bVc" firstAttribute="centerX" secondItem="UI1-LH-MtZ" secondAttribute="centerX" id="2H9-cz-TcT"/>
+                <constraint firstItem="gCX-Ve-FQH" firstAttribute="centerX" secondItem="qee-5Q-ONG" secondAttribute="centerX" id="58Y-02-Waf"/>
+                <constraint firstItem="Qbx-mq-uGt" firstAttribute="trailing" secondItem="m89-JU-bVc" secondAttribute="trailing" id="8O8-Vd-E7Q"/>
+                <constraint firstAttribute="bottom" secondItem="CIv-Xn-Xhw" secondAttribute="bottom" constant="25" id="J6m-Q5-Anc"/>
+                <constraint firstItem="Oxb-5B-T2E" firstAttribute="top" secondItem="gCX-Ve-FQH" secondAttribute="bottom" constant="20" id="KYu-QS-mgd"/>
+                <constraint firstItem="Oxb-5B-T2E" firstAttribute="leading" secondItem="qee-5Q-ONG" secondAttribute="leading" constant="23" id="MFl-r2-iKt"/>
+                <constraint firstItem="Qbx-mq-uGt" firstAttribute="leading" secondItem="qee-5Q-ONG" secondAttribute="leading" constant="32" id="NtC-jl-aIW"/>
+                <constraint firstItem="gCX-Ve-FQH" firstAttribute="centerX" secondItem="Oxb-5B-T2E" secondAttribute="centerX" id="Ozs-QD-xo9"/>
+                <constraint firstItem="Oxb-5B-T2E" firstAttribute="leading" secondItem="UI1-LH-MtZ" secondAttribute="leading" id="S5Y-aT-WYl"/>
+                <constraint firstItem="T1k-yW-mXb" firstAttribute="leading" secondItem="qee-5Q-ONG" secondAttribute="leading" constant="31" id="UO6-vC-yRd"/>
+                <constraint firstItem="gCX-Ve-FQH" firstAttribute="top" secondItem="qee-5Q-ONG" secondAttribute="top" constant="29" id="X72-mZ-FgX"/>
+                <constraint firstItem="Oxb-5B-T2E" firstAttribute="trailing" secondItem="UI1-LH-MtZ" secondAttribute="trailing" id="cTv-Ef-etm"/>
+                <constraint firstAttribute="trailing" secondItem="T1k-yW-mXb" secondAttribute="trailing" constant="33" id="iOp-6k-Dg6"/>
+                <constraint firstItem="CIv-Xn-Xhw" firstAttribute="leading" secondItem="qee-5Q-ONG" secondAttribute="leading" constant="72" id="ijs-Y4-ZiM"/>
+                <constraint firstItem="UI1-LH-MtZ" firstAttribute="centerX" secondItem="CIv-Xn-Xhw" secondAttribute="centerX" id="nf8-ca-3zW"/>
+                <constraint firstItem="CIv-Xn-Xhw" firstAttribute="top" secondItem="UI1-LH-MtZ" secondAttribute="bottom" constant="21" id="nu9-b5-E1S"/>
+                <constraint firstItem="Qbx-mq-uGt" firstAttribute="leading" secondItem="m89-JU-bVc" secondAttribute="leading" id="ofU-g7-Y8R"/>
+                <constraint firstItem="UI1-LH-MtZ" firstAttribute="top" secondItem="T1k-yW-mXb" secondAttribute="bottom" constant="6" id="p24-Av-JUj"/>
+                <constraint firstItem="m89-JU-bVc" firstAttribute="top" secondItem="Qbx-mq-uGt" secondAttribute="bottom" constant="8" symbolic="YES" id="uC3-0a-JkF"/>
+                <constraint firstItem="Qbx-mq-uGt" firstAttribute="top" secondItem="Oxb-5B-T2E" secondAttribute="bottom" constant="29" id="uqt-oZ-MlG"/>
+                <constraint firstItem="T1k-yW-mXb" firstAttribute="top" secondItem="m89-JU-bVc" secondAttribute="bottom" constant="25" id="yu1-du-Ww9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="52" y="47.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LargeCheck" width="25" height="18"/>
+        <image name="Olivia" width="56" height="56"/>
+    </resources>
+</document>

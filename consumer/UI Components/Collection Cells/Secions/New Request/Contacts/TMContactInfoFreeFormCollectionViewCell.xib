@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TMContactInfoFreeFormCollectionViewCell" id="mK3-EW-vO2" userLabel="TMContactInfoFreeFormCollectionViewCell" customClass="TMContactInfoFreeFormCollectionViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Wc-HI-boT">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="WHi-oi-5HG"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="12"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                    </textField>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PencilIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Sir-2o-A3G">
+                        <color key="tintColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="XJe-Kt-oAP"/>
+                            <constraint firstAttribute="height" constant="15" id="Yhl-RM-hN7"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Sir-2o-A3G" secondAttribute="trailing" constant="15.5" id="MbM-Qp-8gI"/>
+                <constraint firstItem="Sir-2o-A3G" firstAttribute="top" secondItem="mK3-EW-vO2" secondAttribute="top" constant="11" id="cHJ-UB-PMN"/>
+                <constraint firstItem="9Wc-HI-boT" firstAttribute="centerX" secondItem="mK3-EW-vO2" secondAttribute="centerX" id="eZp-hJ-2BY"/>
+                <constraint firstItem="9Wc-HI-boT" firstAttribute="centerY" secondItem="mK3-EW-vO2" secondAttribute="centerY" id="tsD-T4-zvp"/>
+            </constraints>
+            <connections>
+                <outlet property="infoInput" destination="9Wc-HI-boT" id="tYQ-ck-SKn"/>
+                <outlet property="pencilIcon" destination="Sir-2o-A3G" id="NsB-hI-90p"/>
+            </connections>
+            <point key="canvasLocation" x="-233" y="-137"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="PencilIcon" width="16" height="16"/>
+    </resources>
+</document>

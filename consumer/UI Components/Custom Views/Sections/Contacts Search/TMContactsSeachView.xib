@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMContactsSeachView" customModule="Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="contactNameInput" destination="qoR-N0-rMw" id="igQ-xa-fEv"/>
+                <outlet property="toLabel" destination="yBf-Mt-AMO" id="Kl5-2t-CDr"/>
+                <outlet property="view" destination="Xme-mG-9gp" id="ldL-6f-SaW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Xme-mG-9gp">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-N0-rMw" customClass="UITextField">
+                    <rect key="frame" x="78" y="0.0" width="197" height="76"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBf-Mt-AMO">
+                    <rect key="frame" x="25" y="0.0" width="28" height="76"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="JuQ-2N-FPg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="12"/>
+                    <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="JuQ-2N-FPg"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yBf-Mt-AMO" firstAttribute="top" secondItem="qoR-N0-rMw" secondAttribute="top" constant="-10" id="0cu-BV-9Wl">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="qoR-N0-rMw" secondAttribute="trailing" constant="19" id="AtJ-5e-GlS">
+                    <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                </constraint>
+                <constraint firstItem="qoR-N0-rMw" firstAttribute="top" secondItem="Xme-mG-9gp" secondAttribute="top" id="CMd-Jb-HaH"/>
+                <constraint firstAttribute="bottom" secondItem="qoR-N0-rMw" secondAttribute="bottom" id="EK1-1y-rhT"/>
+                <constraint firstItem="yBf-Mt-AMO" firstAttribute="top" secondItem="Xme-mG-9gp" secondAttribute="top" id="JXi-H5-TZv"/>
+                <constraint firstItem="qoR-N0-rMw" firstAttribute="leading" secondItem="yBf-Mt-AMO" secondAttribute="trailing" id="REL-Ea-dYQ"/>
+                <constraint firstItem="qoR-N0-rMw" firstAttribute="bottom" secondItem="Xme-mG-9gp" secondAttribute="bottomMargin" constant="-2" id="T9f-QU-zTN">
+                    <variation key="heightClass=regular-widthClass=compact" constant="-8"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="qoR-N0-rMw" secondAttribute="trailing" constant="19" id="WfY-vq-arH"/>
+                <constraint firstItem="yBf-Mt-AMO" firstAttribute="leading" secondItem="Xme-mG-9gp" secondAttribute="leading" constant="10" id="bXu-cs-mO7">
+                    <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                </constraint>
+                <constraint firstItem="yBf-Mt-AMO" firstAttribute="leading" secondItem="Xme-mG-9gp" secondAttribute="leading" constant="10" id="cTG-01-kLW"/>
+                <constraint firstItem="yBf-Mt-AMO" firstAttribute="top" secondItem="Xme-mG-9gp" secondAttribute="topMargin" id="dvw-9Q-iCG">
+                    <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                </constraint>
+                <constraint firstItem="qoR-N0-rMw" firstAttribute="leading" secondItem="yBf-Mt-AMO" secondAttribute="trailing" id="rui-Gx-fzg">
+                    <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="yBf-Mt-AMO" secondAttribute="bottom" id="x5J-jp-Lda"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="bXu-cs-mO7"/>
+                    <exclude reference="AtJ-5e-GlS"/>
+                    <exclude reference="rui-Gx-fzg"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="0cu-BV-9Wl"/>
+                    <include reference="bXu-cs-mO7"/>
+                    <exclude reference="cTG-01-kLW"/>
+                    <exclude reference="dvw-9Q-iCG"/>
+                    <include reference="AtJ-5e-GlS"/>
+                    <exclude reference="REL-Ea-dYQ"/>
+                    <exclude reference="T9f-QU-zTN"/>
+                    <exclude reference="WfY-vq-arH"/>
+                    <include reference="rui-Gx-fzg"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="510" y="382"/>
+        </view>
+    </objects>
+</document>

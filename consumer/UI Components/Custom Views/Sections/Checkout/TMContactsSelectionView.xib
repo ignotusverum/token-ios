@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-ExtraLight.otf">
+            <string>Mallory-ExtraLight</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMContactsSelectionView" customModule="Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="currentContactView" destination="xgE-zr-Px5" id="hNI-h5-s2x"/>
+                <outlet property="requestContactView" destination="Ybm-NV-wRd" id="qbg-iA-igq"/>
+                <outlet property="view" destination="Nmr-dR-hSm" id="Ms8-f5-pgB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Nmr-dR-hSm">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybm-NV-wRd" customClass="TMContactButtonView" customModule="Dev" customModuleProvider="target">
+                    <rect key="frame" x="200" y="25" width="190" height="130"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addressSelection" translatesAutoresizingMaskIntoConstraints="NO" id="Bss-Hq-Tb5">
+                    <rect key="frame" x="186" y="19" width="28" height="107"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="faV-dg-otb"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBR-vy-cGB">
+                    <rect key="frame" x="186" y="57" width="28" height="31"/>
+                    <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="Mef-4P-EtU"/>
+                        <constraint firstAttribute="height" constant="31" id="vYt-LV-SKx" customClass="TMLayoutConstraint" customModule="Dev" customModuleProvider="target">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhone6p">
+                                    <real key="value" value="39"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Mallory-ExtraLight" family="Mallory" pointSize="14"/>
+                    <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="0.35999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgE-zr-Px5" customClass="TMCurrentProfileButtonView" customModule="Dev" customModuleProvider="target">
+                    <rect key="frame" x="11" y="25" width="190" height="130"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9e-2r-cwY">
+                    <rect key="frame" x="22" y="148" width="355" height="1"/>
+                    <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="01D-bO-anP"/>
+                    </constraints>
+                </view>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-8P-Ufk">
+                    <rect key="frame" x="22" y="1" width="355" height="1"/>
+                    <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="TA5-yj-1nS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xgE-zr-Px5" firstAttribute="height" secondItem="Ybm-NV-wRd" secondAttribute="height" id="1by-BT-8Az"/>
+                <constraint firstItem="Bss-Hq-Tb5" firstAttribute="centerY" secondItem="MBR-vy-cGB" secondAttribute="centerY" id="3fZ-xd-nDm"/>
+                <constraint firstItem="xgE-zr-Px5" firstAttribute="top" secondItem="Nmr-dR-hSm" secondAttribute="top" constant="25" id="55D-hb-Ofj"/>
+                <constraint firstItem="FdC-8P-Ufk" firstAttribute="trailing" secondItem="c9e-2r-cwY" secondAttribute="trailing" id="CY2-ob-EkE"/>
+                <constraint firstItem="Bss-Hq-Tb5" firstAttribute="top" secondItem="Ybm-NV-wRd" secondAttribute="top" constant="-6" id="Cl1-B9-DOL"/>
+                <constraint firstItem="c9e-2r-cwY" firstAttribute="centerX" secondItem="MBR-vy-cGB" secondAttribute="centerX" id="Llu-AL-0wv"/>
+                <constraint firstItem="c9e-2r-cwY" firstAttribute="leading" secondItem="Nmr-dR-hSm" secondAttribute="leading" constant="22" id="QQw-yq-GRq"/>
+                <constraint firstItem="FdC-8P-Ufk" firstAttribute="leading" secondItem="c9e-2r-cwY" secondAttribute="leading" id="UMY-YN-iJH"/>
+                <constraint firstAttribute="bottom" secondItem="c9e-2r-cwY" secondAttribute="bottom" constant="1" id="VAz-fq-SZU"/>
+                <constraint firstItem="Ybm-NV-wRd" firstAttribute="leading" secondItem="Nmr-dR-hSm" secondAttribute="leading" constant="200" id="WoS-sM-XPB"/>
+                <constraint firstItem="xgE-zr-Px5" firstAttribute="top" secondItem="Bss-Hq-Tb5" secondAttribute="top" constant="6" id="XAx-uc-yRR"/>
+                <constraint firstItem="Bss-Hq-Tb5" firstAttribute="leading" secondItem="MBR-vy-cGB" secondAttribute="leading" id="b6d-64-akW"/>
+                <constraint firstItem="Bss-Hq-Tb5" firstAttribute="trailing" secondItem="MBR-vy-cGB" secondAttribute="trailing" id="bE9-AX-eqg"/>
+                <constraint firstAttribute="bottom" secondItem="xgE-zr-Px5" secondAttribute="bottom" constant="-5" id="bMe-4X-xuT"/>
+                <constraint firstItem="xgE-zr-Px5" firstAttribute="width" secondItem="Ybm-NV-wRd" secondAttribute="width" id="bi4-Wb-cFQ"/>
+                <constraint firstItem="Bss-Hq-Tb5" firstAttribute="bottom" secondItem="Ybm-NV-wRd" secondAttribute="bottom" constant="-29" id="db1-25-xWf"/>
+                <constraint firstAttribute="trailing" secondItem="Ybm-NV-wRd" secondAttribute="trailing" constant="10" id="kqF-Ba-qeX"/>
+                <constraint firstItem="Bss-Hq-Tb5" firstAttribute="centerX" secondItem="Nmr-dR-hSm" secondAttribute="centerX" id="nav-yY-7oB"/>
+                <constraint firstItem="xgE-zr-Px5" firstAttribute="leading" secondItem="Nmr-dR-hSm" secondAttribute="leading" constant="11" id="qn5-FL-4zM"/>
+                <constraint firstItem="xgE-zr-Px5" firstAttribute="bottom" secondItem="Bss-Hq-Tb5" secondAttribute="bottom" constant="29" id="vfk-gT-4JE"/>
+                <constraint firstItem="FdC-8P-Ufk" firstAttribute="top" secondItem="Nmr-dR-hSm" secondAttribute="top" constant="1" id="wTd-aJ-4HB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="842" y="634"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addressSelection" width="64" height="216"/>
+    </resources>
+</document>

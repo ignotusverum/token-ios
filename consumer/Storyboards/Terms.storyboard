@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Bold.otf">
+            <string>Acta-Bold</string>
+        </array>
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Terms View Controller-->
+        <scene sceneID="z0R-M0-NcW">
+            <objects>
+                <viewController storyboardIdentifier="termsViewController" id="tr4-T3-zh8" customClass="TMTermsViewController" customModule="Dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GJf-Qz-4AR"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdU-ve-oqa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XCh-S5-Frx">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-xo-KPy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Acta-Bold" family="Acta" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XWz-xo-KPy" firstAttribute="bottom" secondItem="hdU-ve-oqa" secondAttribute="top" id="I05-2D-ECa"/>
+                            <constraint firstAttribute="trailing" secondItem="XWz-xo-KPy" secondAttribute="trailing" id="bW1-In-ReJ"/>
+                            <constraint firstItem="XWz-xo-KPy" firstAttribute="top" secondItem="GJf-Qz-4AR" secondAttribute="bottom" id="hst-MD-sfl"/>
+                            <constraint firstItem="XWz-xo-KPy" firstAttribute="leading" secondItem="XCh-S5-Frx" secondAttribute="leading" id="sJp-RP-vOm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="XWz-xo-KPy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="I05-2D-ECa"/>
+                                <exclude reference="bW1-In-ReJ"/>
+                                <exclude reference="hst-MD-sfl"/>
+                                <exclude reference="sJp-RP-vOm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="XWz-xo-KPy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="I05-2D-ECa"/>
+                                <include reference="bW1-In-ReJ"/>
+                                <include reference="hst-MD-sfl"/>
+                                <include reference="sJp-RP-vOm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="XwJ-LD-g6B">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="5Dh-ig-P7v">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="tr4-T3-zh8" id="Sdi-Zy-B56"/>
+                            </connections>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="JWg-xc-1X3">
+                            <rect key="frame" x="124" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMS &amp; PRIVACY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15E-UK-DxB">
+                                    <rect key="frame" x="0.0" y="1" width="128" height="33"/>
+                                    <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="14"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="15E-UK-DxB" secondAttribute="trailing" id="1UC-VU-sjP"/>
+                                <constraint firstItem="15E-UK-DxB" firstAttribute="leading" secondItem="JWg-xc-1X3" secondAttribute="leading" id="ECO-Eh-Mn2"/>
+                                <constraint firstItem="15E-UK-DxB" firstAttribute="top" secondItem="JWg-xc-1X3" secondAttribute="top" constant="1" id="VJs-zD-oiR"/>
+                                <constraint firstAttribute="bottom" secondItem="15E-UK-DxB" secondAttribute="bottom" constant="-1" id="wlH-Nl-Msn"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="15E-UK-DxB"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="1UC-VU-sjP"/>
+                                    <exclude reference="ECO-Eh-Mn2"/>
+                                    <exclude reference="VJs-zD-oiR"/>
+                                    <exclude reference="wlH-Nl-Msn"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="15E-UK-DxB"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="1UC-VU-sjP"/>
+                                    <include reference="ECO-Eh-Mn2"/>
+                                    <include reference="VJs-zD-oiR"/>
+                                    <include reference="wlH-Nl-Msn"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="5Dh-ig-P7v" id="YFR-dB-TGw"/>
+                        <outlet property="textView" destination="XWz-xo-KPy" id="Cen-co-QaI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFS-UN-ojJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2405.5999999999999" y="810.0449775112445"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Jq-eI-uIu">
+            <objects>
+                <navigationController storyboardIdentifier="termsViewControllerNavigation" automaticallyAdjustsScrollViewInsets="NO" id="TdH-SP-DUC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Oam-3o-CCN" customClass="TMNavigationBar" customModule="Dev" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tr4-T3-zh8" kind="relationship" relationship="rootViewController" id="xbp-Oo-TxY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dql-LB-dSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="810"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MalloryMP-Medium.otf">
+            <string>MalloryMP-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TMRequestStyleCollectionViewCell" id="ZP4-jb-Wku" userLabel="TMRequestStyleCollectionViewCell" customClass="TMRequestStyleCollectionViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="137" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="137" height="42"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygC-eG-MAx" customClass="TMLabel" customModule="Dev" customModuleProvider="target">
+                        <rect key="frame" x="14" y="11" width="109" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="900" constant="150" id="dxi-Ag-zox"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MalloryMP-Medium" family="Mallory MP" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone5">
+                                <real key="value" value="11"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ygC-eG-MAx" firstAttribute="top" secondItem="ZP4-jb-Wku" secondAttribute="topMargin" constant="3" id="AR2-JX-pZb"/>
+                <constraint firstAttribute="bottomMargin" secondItem="ygC-eG-MAx" secondAttribute="bottom" constant="3" id="LZd-8g-G8r"/>
+                <constraint firstAttribute="trailingMargin" secondItem="ygC-eG-MAx" secondAttribute="trailing" constant="6" id="Msv-fs-5dI"/>
+                <constraint firstItem="ygC-eG-MAx" firstAttribute="leading" secondItem="ZP4-jb-Wku" secondAttribute="leadingMargin" constant="6" id="S78-UF-WaM"/>
+            </constraints>
+            <connections>
+                <outlet property="maxWidthConstraint" destination="dxi-Ag-zox" id="ick-RS-xYh"/>
+                <outlet property="styleTitleLabel" destination="ygC-eG-MAx" id="6gY-qg-TTZ"/>
+            </connections>
+            <point key="canvasLocation" x="-194.5" y="37"/>
+        </collectionViewCell>
+    </objects>
+</document>

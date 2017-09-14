@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Address View Controller-->
+        <scene sceneID="yQx-gt-PRb">
+            <objects>
+                <viewController storyboardIdentifier="addressViewContoller" automaticallyAdjustsScrollViewInsets="NO" id="D1t-JY-Vhk" customClass="TMAddressViewController" customModule="Dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uf0-PC-B3x"/>
+                        <viewControllerLayoutGuide type="bottom" id="NBQ-lk-vje"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G4k-DO-ZO6">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pkg-MC-jgP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="D1t-JY-Vhk" id="ZzF-Zg-fYF"/>
+                                    <outlet property="delegate" destination="D1t-JY-Vhk" id="L4A-Rp-MX6"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYp-kl-oL5" customClass="TMEmptyBlackDataset" customModule="Dev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pkg-MC-jgP" firstAttribute="leading" secondItem="G4k-DO-ZO6" secondAttribute="leading" id="Brx-MO-Rw1"/>
+                            <constraint firstItem="GYp-kl-oL5" firstAttribute="top" secondItem="Uf0-PC-B3x" secondAttribute="bottom" id="NoO-6A-hRG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GYp-kl-oL5" secondAttribute="bottom" constant="-2" id="TBA-AX-xj6"/>
+                            <constraint firstItem="Pkg-MC-jgP" firstAttribute="leading" secondItem="GYp-kl-oL5" secondAttribute="leading" id="V32-Xy-3zH"/>
+                            <constraint firstItem="GYp-kl-oL5" firstAttribute="trailing" secondItem="Pkg-MC-jgP" secondAttribute="trailing" id="aSi-uK-jCT"/>
+                            <constraint firstItem="GYp-kl-oL5" firstAttribute="top" secondItem="Pkg-MC-jgP" secondAttribute="top" id="gu0-37-DqT"/>
+                            <constraint firstAttribute="trailing" secondItem="Pkg-MC-jgP" secondAttribute="trailing" id="r6G-BL-bWF"/>
+                            <constraint firstItem="Pkg-MC-jgP" firstAttribute="bottom" secondItem="NBQ-lk-vje" secondAttribute="top" id="x3m-X3-ikS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Pkg-MC-jgP"/>
+                                <exclude reference="GYp-kl-oL5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Brx-MO-Rw1"/>
+                                <exclude reference="V32-Xy-3zH"/>
+                                <exclude reference="r6G-BL-bWF"/>
+                                <exclude reference="x3m-X3-ikS"/>
+                                <exclude reference="NoO-6A-hRG"/>
+                                <exclude reference="TBA-AX-xj6"/>
+                                <exclude reference="aSi-uK-jCT"/>
+                                <exclude reference="gu0-37-DqT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Pkg-MC-jgP"/>
+                                <include reference="GYp-kl-oL5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Brx-MO-Rw1"/>
+                                <include reference="V32-Xy-3zH"/>
+                                <include reference="r6G-BL-bWF"/>
+                                <include reference="x3m-X3-ikS"/>
+                                <include reference="NoO-6A-hRG"/>
+                                <include reference="TBA-AX-xj6"/>
+                                <include reference="aSi-uK-jCT"/>
+                                <include reference="gu0-37-DqT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="Q1Z-31-bz9">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="hsg-OB-Iih">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="D1t-JY-Vhk" id="gy3-OK-Nnw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="9TM-nC-Xwa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VRy-IK-mXD">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="15"/>
+                                <state key="normal" title="edit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="D1t-JY-Vhk" eventType="touchUpInside" id="hTe-4M-Iqu"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emptyView" destination="GYp-kl-oL5" id="vbp-dD-LJI"/>
+                        <outlet property="tableView" destination="Pkg-MC-jgP" id="qPA-L4-dmH"/>
+                        <segue destination="md8-PP-SSS" kind="show" identifier="addAddressSegue" id="5Lp-U1-mJk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhA-aD-143" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="810.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QUg-yZ-gek">
+            <objects>
+                <navigationController storyboardIdentifier="addressViewContollerNavigation" automaticallyAdjustsScrollViewInsets="NO" id="aZh-bm-QAM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="t75-lU-VGo" customClass="TMNavigationBar" customModule="Dev" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D1t-JY-Vhk" kind="relationship" relationship="rootViewController" id="ioJ-VF-u9j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aj3-np-b3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="810"/>
+        </scene>
+        <!--New Address Parent View Controller-->
+        <scene sceneID="c78-b9-kZ5">
+            <objects>
+                <viewController storyboardIdentifier="newAddressParentViewController" automaticallyAdjustsScrollViewInsets="NO" id="md8-PP-SSS" customClass="TMNewAddressParentViewController" customModule="Dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zbh-Ko-DEH"/>
+                        <viewControllerLayoutGuide type="bottom" id="gua-F6-lLc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJs-D0-t0Z">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="GL8-CB-S6s">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="ziQ-Es-L9w">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onBackButton:" destination="md8-PP-SSS" id="5oj-rb-R27"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="VpA-CT-Er9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1PC-Jh-47Q">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSaveButtonWithSender:" destination="md8-PP-SSS" eventType="touchUpInside" id="QrE-TV-rrI"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iTE-Yp-ziz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142" y="809"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="25" height="25"/>
+    </resources>
+</document>

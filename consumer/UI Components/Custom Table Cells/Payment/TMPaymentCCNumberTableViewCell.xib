@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMPaymentCCNumberTableViewCell" customModule="Dev" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TMCardNumberCell" rowHeight="180" id="IVl-SI-cJF" customClass="TMPaymentCCNumberTableViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IVl-SI-cJF" id="VCR-Hb-JOW">
+                <frame key="frameInset" width="320" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234 5678 1234 5678" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFp-cb-dCg" customClass="TMCardNumberTextField" customModule="Dev" customModuleProvider="target">
+                        <color key="tintColor" red="0.97647058819999999" green="0.66666666669999997" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="wU4-B1-vGg"/>
+                        </constraints>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wU4-B1-vGg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="wU4-B1-vGg"/>
+                            </mask>
+                        </variation>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD NUMBER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrn-i9-Ud4">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Mla-XH-VyF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="12"/>
+                        <color key="textColor" red="0.56862745098039214" green="0.56470588235294117" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mla-XH-VyF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Mla-XH-VyF"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-5t-AsY">
+                        <color key="backgroundColor" red="0.23921568627450981" green="0.22745098039215686" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="oxq-Fm-ZN2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oxq-Fm-ZN2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="oxq-Fm-ZN2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultCreditCardLarge" translatesAutoresizingMaskIntoConstraints="NO" id="L05-J7-wBC">
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="qYN-pp-NKG">
+                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qYN-pp-NKG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="qYN-pp-NKG"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="GFp-cb-dCg" secondAttribute="bottom" constant="-4.5" id="52g-TF-fA6">
+                        <variation key="heightClass=regular-widthClass=compact" constant="1.5"/>
+                    </constraint>
+                    <constraint firstItem="L05-J7-wBC" firstAttribute="top" secondItem="VCR-Hb-JOW" secondAttribute="topMargin" id="7vZ-jZ-u7c"/>
+                    <constraint firstItem="Xrn-i9-Ud4" firstAttribute="top" secondItem="L05-J7-wBC" secondAttribute="bottom" constant="23" id="K9u-J1-cE0">
+                        <variation key="heightClass=regular-widthClass=compact" constant="27"/>
+                    </constraint>
+                    <constraint firstItem="9ay-5t-AsY" firstAttribute="centerX" secondItem="GFp-cb-dCg" secondAttribute="centerX" id="UXv-CJ-xPd"/>
+                    <constraint firstItem="9ay-5t-AsY" firstAttribute="top" secondItem="GFp-cb-dCg" secondAttribute="bottom" constant="3" id="VdS-iW-nIs">
+                        <variation key="heightClass=regular-widthClass=compact" constant="9"/>
+                    </constraint>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xrn-i9-Ud4" secondAttribute="trailing" constant="58" id="YlA-fl-PQh"/>
+                    <constraint firstItem="L05-J7-wBC" firstAttribute="centerX" secondItem="GFp-cb-dCg" secondAttribute="centerX" id="aMZ-Nz-e2G"/>
+                    <constraint firstItem="9ay-5t-AsY" firstAttribute="leading" secondItem="VCR-Hb-JOW" secondAttribute="leadingMargin" id="aaR-Kb-uP8">
+                        <variation key="heightClass=regular-widthClass=compact" constant="12"/>
+                    </constraint>
+                    <constraint firstItem="GFp-cb-dCg" firstAttribute="top" secondItem="Xrn-i9-Ud4" secondAttribute="bottom" constant="4" id="cNc-ud-Q8p"/>
+                    <constraint firstItem="Xrn-i9-Ud4" firstAttribute="leading" secondItem="GFp-cb-dCg" secondAttribute="leading" id="dgr-sf-Ys6">
+                        <variation key="heightClass=regular-widthClass=compact" constant="52"/>
+                    </constraint>
+                    <constraint firstItem="Xrn-i9-Ud4" firstAttribute="leading" secondItem="VCR-Hb-JOW" secondAttribute="leadingMargin" constant="52" id="dhE-1k-iMa"/>
+                    <constraint firstItem="L05-J7-wBC" firstAttribute="centerX" secondItem="VCR-Hb-JOW" secondAttribute="centerX" id="y11-V2-LAp"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="GFp-cb-dCg"/>
+                        <exclude reference="Xrn-i9-Ud4"/>
+                        <exclude reference="9ay-5t-AsY"/>
+                        <exclude reference="L05-J7-wBC"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="52g-TF-fA6"/>
+                        <exclude reference="cNc-ud-Q8p"/>
+                        <exclude reference="K9u-J1-cE0"/>
+                        <exclude reference="YlA-fl-PQh"/>
+                        <exclude reference="dgr-sf-Ys6"/>
+                        <exclude reference="dhE-1k-iMa"/>
+                        <exclude reference="UXv-CJ-xPd"/>
+                        <exclude reference="VdS-iW-nIs"/>
+                        <exclude reference="aaR-Kb-uP8"/>
+                        <exclude reference="7vZ-jZ-u7c"/>
+                        <exclude reference="aMZ-Nz-e2G"/>
+                        <exclude reference="y11-V2-LAp"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="GFp-cb-dCg"/>
+                        <include reference="Xrn-i9-Ud4"/>
+                        <include reference="9ay-5t-AsY"/>
+                        <include reference="L05-J7-wBC"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="52g-TF-fA6"/>
+                        <include reference="cNc-ud-Q8p"/>
+                        <include reference="K9u-J1-cE0"/>
+                        <include reference="YlA-fl-PQh"/>
+                        <include reference="dgr-sf-Ys6"/>
+                        <include reference="dhE-1k-iMa"/>
+                        <include reference="UXv-CJ-xPd"/>
+                        <include reference="VdS-iW-nIs"/>
+                        <include reference="aaR-Kb-uP8"/>
+                        <include reference="7vZ-jZ-u7c"/>
+                        <include reference="aMZ-Nz-e2G"/>
+                        <include reference="y11-V2-LAp"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="cardImageView" destination="L05-J7-wBC" id="p84-l7-aPM"/>
+                <outlet property="cardNumberTextField" destination="GFp-cb-dCg" id="GGh-cO-ajP"/>
+                <outlet property="separatorView" destination="9ay-5t-AsY" id="a1E-Rr-WWx"/>
+                <outlet property="textField" destination="GFp-cb-dCg" id="Gm5-gK-pDR"/>
+                <outlet property="titleLabel" destination="Xrn-i9-Ud4" id="Ble-pM-yyE"/>
+            </connections>
+            <point key="canvasLocation" x="812" y="392"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="DefaultCreditCardLarge" width="72" height="48"/>
+    </resources>
+</document>

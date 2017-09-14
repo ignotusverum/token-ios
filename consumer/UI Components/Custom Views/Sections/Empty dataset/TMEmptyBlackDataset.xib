@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Book.otf">
+            <string>Acta-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TMEmptyBlackDataset" customModule="Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="HNL-SL-v0x" id="RTE-rs-lXU"/>
+                <outlet property="detailsLabel" destination="MKS-uk-gAo" id="7wy-XO-ulv"/>
+                <outlet property="titleLabel" destination="L9n-9B-n0Q" id="kVs-j6-beZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ayy-f0-BKk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO CARDS SAVED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9n-9B-n0Q">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="y48-tk-iV5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Acta-Book" family="Acta" pointSize="23"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="y48-tk-iV5"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="y48-tk-iV5"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKS-uk-gAo">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="74" id="0Ln-9I-kbb"/>
+                    </constraints>
+                    <string key="text">Token empowers you to give unique,
+personal gifts to the people who mean
+ the most to you.</string>
+                    <fontDescription key="fontDescription" name="Acta-Book" family="Acta" pointSize="17"/>
+                    <color key="textColor" red="0.52941176470588236" green="0.52549019607843139" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0Ln-9I-kbb"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="0Ln-9I-kbb"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNL-SL-v0x">
+                    <color key="backgroundColor" red="0.26666666666666666" green="0.25882352941176473" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="182" id="Cd2-NM-ul8"/>
+                        <constraint firstAttribute="height" constant="55" id="rC6-Iq-3We"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="ADD CARD">
+                        <color key="titleColor" red="0.97368421052631582" green="0.94736842105263164" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Cd2-NM-ul8"/>
+                            <exclude reference="rC6-Iq-3We"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Cd2-NM-ul8"/>
+                            <include reference="rC6-Iq-3We"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="aah-28-FpI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="L9n-9B-n0Q" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" constant="8" id="0zT-wu-qD5"/>
+                <constraint firstItem="L9n-9B-n0Q" firstAttribute="leading" secondItem="MKS-uk-gAo" secondAttribute="leading" id="CNU-qO-mbD"/>
+                <constraint firstItem="L9n-9B-n0Q" firstAttribute="trailing" secondItem="MKS-uk-gAo" secondAttribute="trailing" id="L0P-IA-hfs"/>
+                <constraint firstItem="HNL-SL-v0x" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="73" id="S9K-Ei-HXC"/>
+                <constraint firstItem="HNL-SL-v0x" firstAttribute="top" secondItem="L9n-9B-n0Q" secondAttribute="bottom" constant="83" id="bqa-XT-K6J"/>
+                <constraint firstItem="MKS-uk-gAo" firstAttribute="centerX" secondItem="HNL-SL-v0x" secondAttribute="centerX" id="hc1-RM-k22"/>
+                <constraint firstItem="HNL-SL-v0x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="imj-dN-Cm2"/>
+                <constraint firstItem="L9n-9B-n0Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="-8" id="t7f-eS-Hl7"/>
+                <constraint firstItem="HNL-SL-v0x" firstAttribute="top" secondItem="MKS-uk-gAo" secondAttribute="bottom" constant="20" id="xSK-G7-3IQ"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="L9n-9B-n0Q"/>
+                    <exclude reference="MKS-uk-gAo"/>
+                    <exclude reference="HNL-SL-v0x"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="S9K-Ei-HXC"/>
+                    <exclude reference="bqa-XT-K6J"/>
+                    <exclude reference="imj-dN-Cm2"/>
+                    <exclude reference="xSK-G7-3IQ"/>
+                    <exclude reference="0zT-wu-qD5"/>
+                    <exclude reference="CNU-qO-mbD"/>
+                    <exclude reference="L0P-IA-hfs"/>
+                    <exclude reference="t7f-eS-Hl7"/>
+                    <exclude reference="hc1-RM-k22"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="L9n-9B-n0Q"/>
+                    <include reference="MKS-uk-gAo"/>
+                    <include reference="HNL-SL-v0x"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="S9K-Ei-HXC"/>
+                    <include reference="bqa-XT-K6J"/>
+                    <include reference="imj-dN-Cm2"/>
+                    <include reference="xSK-G7-3IQ"/>
+                    <include reference="0zT-wu-qD5"/>
+                    <include reference="CNU-qO-mbD"/>
+                    <include reference="L0P-IA-hfs"/>
+                    <include reference="t7f-eS-Hl7"/>
+                    <include reference="hc1-RM-k22"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Book.otf">
+            <string>Acta-Book</string>
+        </array>
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TMCartItemTableViewCell" id="4Mh-ZZ-JTU" customClass="TMCartItemTableViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="118"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Mh-ZZ-JTU" id="IMS-td-gYN">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="117.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIR-lz-NNg">
+                        <rect key="frame" x="14" y="8" width="372" height="101"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dq4-eg-mdT" customClass="TMCartQuantityControl" customModule="Dev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="14" width="43" height="73"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="7ry-A7-lsk"/>
+                                    <constraint firstAttribute="height" constant="73" id="bZq-o7-Daa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqh-9K-qRV">
+                                <rect key="frame" x="55" y="49" width="0.0" height="37"/>
+                                <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="13"/>
+                                <color key="textColor" red="0.36862745099999999" green="0.36470588240000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-mS-dNb">
+                                <rect key="frame" x="55" y="21" width="153" height="39"/>
+                                <fontDescription key="fontDescription" name="Acta-Book" family="Acta" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpP-Ci-h05">
+                                <rect key="frame" x="235" y="15" width="137" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="iHj-ho-JC5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M6I-mS-dNb" firstAttribute="leading" secondItem="Dq4-eg-mdT" secondAttribute="trailing" constant="12" id="2zv-4L-9WY"/>
+                            <constraint firstItem="M6I-mS-dNb" firstAttribute="top" secondItem="bIR-lz-NNg" secondAttribute="top" constant="21" id="Jjr-v0-Bbh"/>
+                            <constraint firstItem="Dq4-eg-mdT" firstAttribute="top" secondItem="bIR-lz-NNg" secondAttribute="top" constant="14" id="OLQ-GP-Ags"/>
+                            <constraint firstItem="M6I-mS-dNb" firstAttribute="leading" secondItem="yqh-9K-qRV" secondAttribute="leading" id="Pvd-Nw-qat"/>
+                            <constraint firstItem="Dq4-eg-mdT" firstAttribute="centerY" secondItem="rpP-Ci-h05" secondAttribute="centerY" id="UfL-T9-RQO"/>
+                            <constraint firstAttribute="trailing" secondItem="rpP-Ci-h05" secondAttribute="trailing" id="XYE-NK-Byf"/>
+                            <constraint firstItem="rpP-Ci-h05" firstAttribute="centerY" secondItem="bIR-lz-NNg" secondAttribute="centerY" id="gLD-Bc-MWL"/>
+                            <constraint firstItem="Dq4-eg-mdT" firstAttribute="leading" secondItem="bIR-lz-NNg" secondAttribute="leading" id="mTX-TI-w2Q"/>
+                            <constraint firstItem="yqh-9K-qRV" firstAttribute="top" secondItem="bIR-lz-NNg" secondAttribute="top" constant="49" id="oVY-UM-E5R"/>
+                            <constraint firstItem="rpP-Ci-h05" firstAttribute="top" secondItem="bIR-lz-NNg" secondAttribute="top" constant="15" id="ocA-PW-QCr"/>
+                            <constraint firstAttribute="bottom" secondItem="M6I-mS-dNb" secondAttribute="bottom" constant="41" id="om3-Ie-VNz"/>
+                            <constraint firstItem="rpP-Ci-h05" firstAttribute="leading" secondItem="M6I-mS-dNb" secondAttribute="trailing" constant="27" id="pzw-G5-SCK"/>
+                            <constraint firstAttribute="bottom" secondItem="yqh-9K-qRV" secondAttribute="bottom" constant="15" id="qw4-Qa-QEb"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wb-2V-xfo">
+                        <rect key="frame" x="26" y="115.5" width="360" height="1"/>
+                        <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="irk-qh-7VT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0Wb-2V-xfo" firstAttribute="leading" secondItem="IMS-td-gYN" secondAttribute="leadingMargin" constant="18" id="0Wl-4J-6rE"/>
+                    <constraint firstItem="bIR-lz-NNg" firstAttribute="top" secondItem="IMS-td-gYN" secondAttribute="topMargin" id="3Yz-zE-Sa0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0Wb-2V-xfo" secondAttribute="trailing" constant="6" id="7Jc-eG-DIx"/>
+                    <constraint firstItem="bIR-lz-NNg" firstAttribute="leading" secondItem="IMS-td-gYN" secondAttribute="leadingMargin" constant="6" id="Eg1-Nb-89J"/>
+                    <constraint firstItem="bIR-lz-NNg" firstAttribute="centerX" secondItem="IMS-td-gYN" secondAttribute="centerX" id="U07-ng-ajb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0Wb-2V-xfo" secondAttribute="bottom" constant="-7" id="skz-tS-Hnm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="itemImageView" destination="rpP-Ci-h05" id="Tve-km-JzD"/>
+                <outlet property="movingView" destination="bIR-lz-NNg" id="wpd-10-vKL"/>
+                <outlet property="priceLabel" destination="yqh-9K-qRV" id="ZhW-tr-uZ1"/>
+                <outlet property="quantityView" destination="Dq4-eg-mdT" id="u6w-iF-J8S"/>
+                <outlet property="titleLabel" destination="M6I-mS-dNb" id="gOe-fc-4Pb"/>
+            </connections>
+            <point key="canvasLocation" x="986" y="857"/>
+        </tableViewCell>
+    </objects>
+</document>

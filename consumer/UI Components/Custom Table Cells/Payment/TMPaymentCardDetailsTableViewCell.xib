@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TMCardInfoCell" rowHeight="100" id="N1H-jf-2iQ" customClass="TMPaymentCardDetailsTableViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N1H-jf-2iQ" id="SjZ-0T-enp">
+                <frame key="frameInset" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="12/34" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-uI-cG0" customClass="TMTCardInfoExpirationTextField" customModule="Dev" customModuleProvider="target">
+                        <color key="tintColor" red="0.97647058819999999" green="0.66666666669999997" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iu2-pc-H22" customClass="TMCardCVVTextField" customModule="Dev" customModuleProvider="target">
+                        <color key="tintColor" red="0.97647058819999999" green="0.66666666669999997" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="12345" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0W2-ey-8dk" customClass="TMPaymentTextField" customModule="Dev" customModuleProvider="target">
+                        <color key="tintColor" red="0.97647058819999999" green="0.66666666669999997" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CmM-CB-ZV9" userLabel="bottom">
+                        <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1W6-XX-uhg"/>
+                            <constraint firstAttribute="height" constant="1" id="J3Z-ia-j8t"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="J3Z-ia-j8t"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="J3Z-ia-j8t"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBQ-o4-TYB" userLabel="exp/cvv">
+                        <color key="backgroundColor" red="0.30588235289999999" green="0.29411764709999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="98d-Q3-IWN"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hu-91-h4e" userLabel="cvv/zip">
+                        <color key="backgroundColor" red="0.30588235289999999" green="0.29411764709999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="HPW-fT-uex"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3po-BB-VFX">
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="13"/>
+                        <color key="textColor" red="0.63529411764705879" green="0.63137254901960782" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNT-bE-faj">
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="13"/>
+                        <color key="textColor" red="0.63529411764705879" green="0.63137254901960782" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B13-S9-HhN">
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="13"/>
+                        <color key="textColor" red="0.63529411764705879" green="0.63137254901960782" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="CmM-CB-ZV9" firstAttribute="trailing" secondItem="0W2-ey-8dk" secondAttribute="trailing" id="CHV-CG-aVN"/>
+                    <constraint firstItem="iu2-pc-H22" firstAttribute="leading" secondItem="nBQ-o4-TYB" secondAttribute="trailing" constant="2" id="DGV-H4-W79"/>
+                    <constraint firstItem="iu2-pc-H22" firstAttribute="centerX" secondItem="SjZ-0T-enp" secondAttribute="centerX" id="FPz-W4-x6R"/>
+                    <constraint firstItem="0W2-ey-8dk" firstAttribute="leading" secondItem="iu2-pc-H22" secondAttribute="trailing" constant="5" id="HJb-0x-233"/>
+                    <constraint firstItem="B13-S9-HhN" firstAttribute="centerX" secondItem="0W2-ey-8dk" secondAttribute="centerX" constant="1.5" id="KnE-Op-XJ6"/>
+                    <constraint firstItem="CmM-CB-ZV9" firstAttribute="top" secondItem="WNT-bE-faj" secondAttribute="bottom" constant="46" id="Ktu-CA-02a"/>
+                    <constraint firstItem="8Hu-91-h4e" firstAttribute="bottom" secondItem="nBQ-o4-TYB" secondAttribute="bottom" id="MmU-e7-WIO"/>
+                    <constraint firstItem="0W2-ey-8dk" firstAttribute="height" secondItem="iu2-pc-H22" secondAttribute="height" id="NkK-h7-fzz"/>
+                    <constraint firstItem="zSN-uI-cG0" firstAttribute="top" secondItem="SjZ-0T-enp" secondAttribute="top" id="QnE-xj-USH"/>
+                    <constraint firstItem="3po-BB-VFX" firstAttribute="baseline" secondItem="B13-S9-HhN" secondAttribute="baseline" id="RgA-Ud-WYq"/>
+                    <constraint firstItem="zSN-uI-cG0" firstAttribute="baseline" secondItem="iu2-pc-H22" secondAttribute="baseline" id="SL7-Jb-NQm"/>
+                    <constraint firstItem="nBQ-o4-TYB" firstAttribute="top" secondItem="SjZ-0T-enp" secondAttribute="topMargin" constant="2" id="TDV-wp-xSh"/>
+                    <constraint firstItem="nBQ-o4-TYB" firstAttribute="centerY" secondItem="SjZ-0T-enp" secondAttribute="centerY" id="TSn-Pd-Zlj"/>
+                    <constraint firstItem="iu2-pc-H22" firstAttribute="leading" secondItem="zSN-uI-cG0" secondAttribute="trailing" constant="5" id="TU5-op-19p"/>
+                    <constraint firstItem="0W2-ey-8dk" firstAttribute="width" secondItem="iu2-pc-H22" secondAttribute="width" id="WVF-VF-1DJ"/>
+                    <constraint firstItem="CmM-CB-ZV9" firstAttribute="top" secondItem="0W2-ey-8dk" secondAttribute="bottom" constant="8" id="Y16-Va-ZNb"/>
+                    <constraint firstItem="iu2-pc-H22" firstAttribute="width" secondItem="zSN-uI-cG0" secondAttribute="width" id="Yev-au-XN4"/>
+                    <constraint firstItem="3po-BB-VFX" firstAttribute="centerX" secondItem="zSN-uI-cG0" secondAttribute="centerX" id="ZMi-Od-mAO"/>
+                    <constraint firstItem="8Hu-91-h4e" firstAttribute="top" secondItem="nBQ-o4-TYB" secondAttribute="top" id="fDJ-5a-U2b"/>
+                    <constraint firstItem="WNT-bE-faj" firstAttribute="centerX" secondItem="CmM-CB-ZV9" secondAttribute="centerX" constant="1" id="kkF-IN-VGQ"/>
+                    <constraint firstItem="CmM-CB-ZV9" firstAttribute="top" secondItem="3po-BB-VFX" secondAttribute="bottom" constant="45" id="l7A-wO-edC"/>
+                    <constraint firstItem="zSN-uI-cG0" firstAttribute="leading" secondItem="SjZ-0T-enp" secondAttribute="leadingMargin" constant="12" id="lyt-NN-z9b"/>
+                    <constraint firstItem="iu2-pc-H22" firstAttribute="baseline" secondItem="0W2-ey-8dk" secondAttribute="baseline" id="mYm-y9-1Kt"/>
+                    <constraint firstItem="8Hu-91-h4e" firstAttribute="leading" secondItem="iu2-pc-H22" secondAttribute="trailing" constant="2" id="rSp-8R-hnc"/>
+                    <constraint firstItem="zSN-uI-cG0" firstAttribute="bottom" secondItem="iu2-pc-H22" secondAttribute="bottom" id="uGx-bd-VUK"/>
+                    <constraint firstItem="iu2-pc-H22" firstAttribute="height" secondItem="zSN-uI-cG0" secondAttribute="height" id="wfx-bt-dfL"/>
+                    <constraint firstItem="zSN-uI-cG0" firstAttribute="centerY" secondItem="SjZ-0T-enp" secondAttribute="centerY" constant="-5" id="x9n-1i-Cb6"/>
+                    <constraint firstItem="nBQ-o4-TYB" firstAttribute="leading" secondItem="zSN-uI-cG0" secondAttribute="trailing" constant="2" id="xpE-ZK-stv"/>
+                    <constraint firstItem="CmM-CB-ZV9" firstAttribute="leading" secondItem="zSN-uI-cG0" secondAttribute="leading" id="xuW-4Q-vtp"/>
+                    <constraint firstItem="iu2-pc-H22" firstAttribute="bottom" secondItem="0W2-ey-8dk" secondAttribute="bottom" id="yrb-mO-15W"/>
+                    <constraint firstItem="CmM-CB-ZV9" firstAttribute="top" secondItem="SjZ-0T-enp" secondAttribute="topMargin" constant="90" id="za5-7A-g06"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0W2-ey-8dk" secondAttribute="trailing" constant="12" id="zfW-in-ZQ6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="cvvTextField" destination="iu2-pc-H22" id="fhi-zs-YEq"/>
+                <outlet property="expirationTextField" destination="zSN-uI-cG0" id="UCZ-6h-h5E"/>
+                <outlet property="separatorView" destination="CmM-CB-ZV9" id="4GR-mD-U9S"/>
+                <outlet property="textField" destination="zSN-uI-cG0" id="f0Y-sv-boa"/>
+                <outlet property="zipTextField" destination="0W2-ey-8dk" id="Thw-g6-f6C"/>
+                <outletCollection property="separatorsOutlets" destination="nBQ-o4-TYB" collectionClass="NSMutableArray" id="xZi-px-sAr"/>
+                <outletCollection property="separatorsOutlets" destination="8Hu-91-h4e" collectionClass="NSMutableArray" id="Eki-yw-d66"/>
+            </connections>
+            <point key="canvasLocation" x="422" y="680"/>
+        </tableViewCell>
+    </objects>
+</document>

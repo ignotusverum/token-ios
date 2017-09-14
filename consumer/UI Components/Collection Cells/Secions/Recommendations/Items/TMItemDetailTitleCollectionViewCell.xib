@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DSType - Acta-Bold.otf">
+            <string>Acta-Bold</string>
+        </array>
+        <array key="Mallory-Book.otf">
+            <string>Mallory-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TMItemDetailTitleCollectionViewCell" id="Z4T-ac-imt" customClass="TMItemDetailTitleCollectionViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397.5" height="467"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="397.5" height="467"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-7W-d06">
+                        <rect key="frame" x="20" y="30" width="366" height="271"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLX-BM-wQr">
+                        <rect key="frame" x="80" y="369" width="246" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="L2W-ww-Nlj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Mallory-Book" family="Mallory" pointSize="12"/>
+                        <color key="textColor" red="0.36862745099999999" green="0.36470588240000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="L2W-ww-Nlj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="L2W-ww-Nlj"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djn-Er-EZW" customClass="TMCopyLabel" customModule="Dev" customModuleProvider="target">
+                        <rect key="frame" x="20" y="319" width="366" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="M3X-1k-7Hq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Acta-Bold" family="Acta" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="M3X-1k-7Hq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="M3X-1k-7Hq"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DRE-7W-d06" firstAttribute="top" secondItem="Z4T-ac-imt" secondAttribute="topMargin" constant="22" id="Byr-if-yEv"/>
+                <constraint firstItem="DRE-7W-d06" firstAttribute="centerX" secondItem="djn-Er-EZW" secondAttribute="centerX" id="GXO-sF-wkS"/>
+                <constraint firstItem="djn-Er-EZW" firstAttribute="trailing" secondItem="OLX-BM-wQr" secondAttribute="trailing" id="MKG-EM-Fo0">
+                    <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                </constraint>
+                <constraint firstItem="djn-Er-EZW" firstAttribute="leading" secondItem="Z4T-ac-imt" secondAttribute="leadingMargin" constant="72" id="ax6-8m-qbk">
+                    <variation key="heightClass=regular-widthClass=compact" constant="12"/>
+                </constraint>
+                <constraint firstItem="djn-Er-EZW" firstAttribute="leading" secondItem="OLX-BM-wQr" secondAttribute="leading" id="daY-fi-oIn">
+                    <variation key="heightClass=regular-widthClass=compact" constant="-60"/>
+                </constraint>
+                <constraint firstItem="OLX-BM-wQr" firstAttribute="top" secondItem="djn-Er-EZW" secondAttribute="bottom" constant="10" id="gfK-dA-ilh"/>
+                <constraint firstItem="DRE-7W-d06" firstAttribute="leading" secondItem="Z4T-ac-imt" secondAttribute="leadingMargin" constant="12" id="jN5-UA-BQ2"/>
+                <constraint firstItem="djn-Er-EZW" firstAttribute="top" secondItem="DRE-7W-d06" secondAttribute="bottom" constant="18" id="jfm-0m-68x"/>
+                <constraint firstAttribute="trailing" secondItem="DRE-7W-d06" secondAttribute="trailing" constant="12" id="m7a-Eq-Ef6"/>
+                <constraint firstAttribute="bottom" secondItem="OLX-BM-wQr" secondAttribute="bottom" constant="77" id="mF4-Zb-hgc"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="DRE-7W-d06"/>
+                    <exclude reference="OLX-BM-wQr"/>
+                    <exclude reference="djn-Er-EZW"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Byr-if-yEv"/>
+                    <exclude reference="GXO-sF-wkS"/>
+                    <exclude reference="jN5-UA-BQ2"/>
+                    <exclude reference="MKG-EM-Fo0"/>
+                    <exclude reference="ax6-8m-qbk"/>
+                    <exclude reference="daY-fi-oIn"/>
+                    <exclude reference="jfm-0m-68x"/>
+                    <exclude reference="gfK-dA-ilh"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="DRE-7W-d06"/>
+                    <include reference="OLX-BM-wQr"/>
+                    <include reference="djn-Er-EZW"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Byr-if-yEv"/>
+                    <include reference="GXO-sF-wkS"/>
+                    <include reference="jN5-UA-BQ2"/>
+                    <include reference="MKG-EM-Fo0"/>
+                    <include reference="ax6-8m-qbk"/>
+                    <include reference="daY-fi-oIn"/>
+                    <include reference="jfm-0m-68x"/>
+                    <include reference="gfK-dA-ilh"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="displayNameLabel" destination="djn-Er-EZW" id="VQJ-nD-RhR"/>
+                <outlet property="imageView" destination="DRE-7W-d06" id="H4s-tr-yP6"/>
+                <outlet property="priceLabel" destination="OLX-BM-wQr" id="V07-uy-8wl"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

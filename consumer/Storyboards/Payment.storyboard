@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E191a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment View Controller-->
+        <scene sceneID="DOW-Fs-26E">
+            <objects>
+                <viewController storyboardIdentifier="paymentViewController" automaticallyAdjustsScrollViewInsets="NO" id="F1y-TW-vsk" customClass="TMPaymentViewController" customModule="Dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zGL-Og-bVQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ds-dg-feH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qgU-rg-8et">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lfo-s5-dQN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="F1y-TW-vsk" id="hup-CS-9hM"/>
+                                    <outlet property="delegate" destination="F1y-TW-vsk" id="UUI-O2-egk"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynX-TP-dyA" customClass="TMEmptyBlackDataset" customModule="Dev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-2" width="375" height="605"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lfo-s5-dQN" firstAttribute="bottom" secondItem="0ds-dg-feH" secondAttribute="top" id="A1b-sk-kkF"/>
+                            <constraint firstItem="ynX-TP-dyA" firstAttribute="bottom" secondItem="0ds-dg-feH" secondAttribute="top" id="CA9-l1-PRD"/>
+                            <constraint firstItem="ynX-TP-dyA" firstAttribute="leading" secondItem="Lfo-s5-dQN" secondAttribute="leading" id="GNq-Ak-abf"/>
+                            <constraint firstItem="Lfo-s5-dQN" firstAttribute="leading" secondItem="qgU-rg-8et" secondAttribute="leading" id="TY8-QC-lhg"/>
+                            <constraint firstItem="Lfo-s5-dQN" firstAttribute="top" secondItem="zGL-Og-bVQ" secondAttribute="bottom" id="WsN-eI-spx"/>
+                            <constraint firstAttribute="trailing" secondItem="Lfo-s5-dQN" secondAttribute="trailing" id="aAi-I7-kq6"/>
+                            <constraint firstItem="ynX-TP-dyA" firstAttribute="top" secondItem="qgU-rg-8et" secondAttribute="topMargin" constant="-2" id="bB7-b0-dPD"/>
+                            <constraint firstItem="ynX-TP-dyA" firstAttribute="trailing" secondItem="Lfo-s5-dQN" secondAttribute="trailing" id="vGJ-c4-DPj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Lfo-s5-dQN"/>
+                                <exclude reference="ynX-TP-dyA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="A1b-sk-kkF"/>
+                                <exclude reference="TY8-QC-lhg"/>
+                                <exclude reference="WsN-eI-spx"/>
+                                <exclude reference="aAi-I7-kq6"/>
+                                <exclude reference="CA9-l1-PRD"/>
+                                <exclude reference="GNq-Ak-abf"/>
+                                <exclude reference="bB7-b0-dPD"/>
+                                <exclude reference="vGJ-c4-DPj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Lfo-s5-dQN"/>
+                                <include reference="ynX-TP-dyA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="A1b-sk-kkF"/>
+                                <include reference="TY8-QC-lhg"/>
+                                <include reference="WsN-eI-spx"/>
+                                <include reference="aAi-I7-kq6"/>
+                                <include reference="CA9-l1-PRD"/>
+                                <include reference="GNq-Ak-abf"/>
+                                <include reference="bB7-b0-dPD"/>
+                                <include reference="vGJ-c4-DPj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="dhC-A2-5v3">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="R34-II-8Zo">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="F1y-TW-vsk" id="7Ml-0b-JLt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="PPi-1L-QAP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qXm-T5-9pz">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="edit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="F1y-TW-vsk" eventType="touchUpInside" id="GJW-5m-5eX"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emptyView" destination="ynX-TP-dyA" id="Vyx-R1-ryV"/>
+                        <outlet property="tableView" destination="Lfo-s5-dQN" id="JFv-bq-aC6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7y-SQ-FLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="810.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sAo-RA-uz5">
+            <objects>
+                <navigationController storyboardIdentifier="paymentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="idU-tS-iUQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="lTe-9F-a9m" customClass="TMNavigationBar" customModule="Dev" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1137254902" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F1y-TW-vsk" kind="relationship" relationship="rootViewController" id="33F-qH-eyU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SiX-1J-sMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="810.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalCompressionResistancePriority="1000" reuseIdentifier="TMTokenDescriptionCollectionViewCell" id="6vJ-a6-1d5" customClass="TMTokenDescriptionCollectionViewCell" customModule="Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="149"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="149"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tokenChat" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-F4-bAY">
+                        <rect key="frame" x="0.0" y="18" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Oiu-sf-EKp"/>
+                            <constraint firstAttribute="width" constant="30" id="PvI-A6-7K9"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kno-zd-LG0">
+                        <rect key="frame" x="35" y="34" width="244" height="90"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIm-18-fdH">
+                                <rect key="frame" x="25" y="18" width="194" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AIm-18-fdH" firstAttribute="top" secondItem="kno-zd-LG0" secondAttribute="top" constant="18" id="Rwd-eq-pzb">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone6p">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="AIm-18-fdH" firstAttribute="leading" secondItem="kno-zd-LG0" secondAttribute="leading" constant="25" id="Zbc-sc-pTC" customClass="TMLayoutConstraint" customModule="Dev" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone6p">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="AIm-18-fdH" secondAttribute="trailing" constant="25" id="jXm-UV-WnD"/>
+                            <constraint firstAttribute="bottom" secondItem="AIm-18-fdH" secondAttribute="bottom" constant="20" id="u98-61-FzP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kno-zd-LG0" firstAttribute="leading" secondItem="kP0-F4-bAY" secondAttribute="trailing" constant="5" id="EoM-KY-JXV"/>
+                <constraint firstAttribute="bottom" secondItem="kno-zd-LG0" secondAttribute="bottom" constant="25" id="TgX-7q-jzN" customClass="TMLayoutConstraint" customModule="Dev" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhone6p">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="kP0-F4-bAY" firstAttribute="leading" secondItem="6vJ-a6-1d5" secondAttribute="leading" id="aje-4p-ePi"/>
+                <constraint firstItem="kno-zd-LG0" firstAttribute="top" secondItem="6vJ-a6-1d5" secondAttribute="top" constant="34" id="erY-Ou-Eq5"/>
+                <constraint firstItem="kP0-F4-bAY" firstAttribute="top" secondItem="6vJ-a6-1d5" secondAttribute="top" constant="18" id="rKs-Ex-5Wb"/>
+                <constraint firstAttribute="trailing" secondItem="kno-zd-LG0" secondAttribute="trailing" constant="21" id="rnG-rn-3yz">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhone6">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+            </constraints>
+            <size key="customSize" width="346" height="126"/>
+            <connections>
+                <outlet property="bubbleContainerView" destination="kno-zd-LG0" id="iPH-Ls-pDY"/>
+                <outlet property="contentLabel" destination="AIm-18-fdH" id="vXT-yY-bZQ"/>
+            </connections>
+            <point key="canvasLocation" x="-99" y="124.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tokenChat" width="93" height="102"/>
+    </resources>
+</document>
